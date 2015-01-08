@@ -12,4 +12,3 @@
 function a_s_r(o,c){
 	o.addClass(c).siblings().removeClass(c);	
 }
-

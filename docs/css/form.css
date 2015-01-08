@@ -1,0 +1,188 @@
+/**
+表单控件
+*input默认大小274*32
+*label字体大小14px,颜色#666
+*提示颜色#999
+*模拟单选复选框大小16*16
+**/
+input:focus { border:1px solid #5DC2FE; }
+/*-- 表单 --*/
+.form-group {
+	margin-bottom: 20px;
+	font-size: 14px;
+	color: #666;
+}
+.form-label { line-height: 32px; }
+.form-input {
+	width: 274px;
+	height: 14px;
+	line-height: 14px;
+	padding: 8px;
+	border: 1px solid #CCC;
+	vertical-align: top;
+}
+.form-select {
+	width: 186px;
+	height: 32px;
+	margin-right: 10px;
+	border: 1px solid #ccc;
+}
+.form-input:focus, .form-select:focus { border-color: #5DC2FE; }
+.input-verifyCode { width: 106px; }
+.img-verifyCode {
+	vertical-align: top;
+	margin: 0 12px 0 6px;
+}
+.form-group .label-radio, .form-group .label-checkbox {
+	display: inline-block;
+	height: 16px;
+	line-height: 16px;
+}
+.form-group .label-radio input, .form-group .label-checkbox input {
+	height: 16px;
+	width: 16px;
+	vertical-align: top;
+	margin: 0 10px;
+}
+.form-link {
+	line-height: 32px;
+	color: #0085d0;
+}
+.form-link:hover { text-decoration: underline; }
+.form-explain {
+	font-size: 14px;
+	line-height: 40px;
+}
+/*提示*/
+.form-tips {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	color: #999;
+}
+.group-warning .form-input, .group-warning .form-input:focus { border-color: #FA4C42; }
+.group-warning .form-tips, .form-placeholder .group-warning .form-label, .tips-error { color: #f92519; }
+.group-success .form-tips { color: #5CB85C; }
+.icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+}
+.form-group .icon {
+	vertical-align: middle;
+	margin-left: 10px;
+	margin-right: 2px;
+}
+.icon-error { background: url(../images/icon-error.png) no-repeat; }
+.icon-right { background: url(../images/icon-right.png) no-repeat; }
+/*== 水平 ==*/
+.form-horizontal .form-label {
+	display: inline-block;
+	width: 4em;
+	text-align: right;
+}
+.form-horizontal .btn { margin-left: 64px; }
+/*== 文字在输入框上 ==*/
+.form-placeholder .form-group { position: relative; }
+.form-placeholder .form-label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 10px;
+	line-height: 32px;
+	z-index: 1;
+	cursor: text;
+}
+/*== 块状 ==*/
+.form-block .form-label { display: block; }
+/*== 内联 ==*/
+.form-inline .form-group { display: inline; }
+.form-inline .form-input { width: 120px; }
+/*模拟下拉框*/
+.dropdown, .dropdown-toggle {
+	display: inline-block;
+ *display:inline;
+ *zoom:1;
+	height: 30px;
+}
+.dropdown {
+	position: relative;
+	cursor: default;
+	vertical-align: top;
+	margin-right: 10px;
+}
+.dropdown-toggle, .dropdown-menu {
+	width: 184px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+.dropdown-toggle {
+	line-height: 32px;
+	overflow: hidden;
+}
+.dropdown a:hover { text-decoration: none; }
+.dropdown-input {
+	padding: 0 30px 0 6px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	color: #999;
+	border: none;
+}
+.dropdown .caret {
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	width: 25px;
+	background: url(../images/caret.png) no-repeat;
+}
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	top: 31px;
+	left: 0;
+	border-top-color: #57B5E3;
+	max-height: 144px;
+	_height: 144px;
+	overflow-y: auto;
+	z-index: 9;
+}
+.open .dropdown-menu { display: block; }
+.dropdown-menu li { *zoom:1;
+}
+.dropdown-menu a {
+	display: block;
+	font-size: 14px;
+	line-height: 28px;
+	padding: 0 10px;
+}
+.dropdown-menu li:hover { background-color: #F9F9F9; }
+/*单选框-复选框*/
+.radio, .checkbox { 
+	display:inline;
+}
+.radio input, .checkbox input { visibility: hidden; }
+.radio-btn, .checkbox-btn {
+	display: inline-block;
+	padding-left: 10px;
+	margin-left: 10px;
+	line-height: 16px;
+}
+.radio-btn { background: url(../images/radio_normal.png) no-repeat left center; }
+.radio .checked { background: url(../images/radio_select.png) no-repeat left center; }
+.checkbox-btn { background: url(../images/checkbox_normal.png) no-repeat left center; }
+.checkbox .checked { background: url(../images/checkbox_select.png) no-repeat left center; }
+/*计数输入框*/
+.textarea-box {
+	width: 400px;
+	min-height: 60px;
+	_height: 60px;
+	padding: 2px 4px;
+	margin-bottom: 4px;
+	border: 1px solid #CACACA;
+	outline: none;
+	cursor: text;
+	word-break: break-word;
+	word-wrap: break-word;
+}
+.warning em { color: red; }

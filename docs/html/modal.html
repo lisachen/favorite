@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="zh-CN"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh-CN">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="这是里是关键字">
+<meta name="description" content=" 网站内容描述">
+<meta name="author" content="网站作者">
+<link rel="shortcut icon" href="images/favicon.ico">
+<title>标题</title>
+<link href="../css/public.css" rel="stylesheet">
+<link href="../css/common.css" rel="stylesheet">
+<link href="../css/page.css" rel="stylesheet">
+<link href="../css/form.css" rel="stylesheet">
+</head>
+<body>
+<!--[if  IE 6]> 
+<div id="ie6-warning">
+	您正在使用IE6或以IE6为内核的浏览器，可能导致本网站无法正常显示，建议您升级到更高版本。<a href="http://www.microsoft.com/china/windows/internet-explorer/"
+		target="_blank">点击下载</a><a id="ie6-close href="javascript:void(0)"">关闭</a>
+</div>
+<script>
+	$body=$('body');
+	$body.addClass('ie6');
+	$('#ie6-close').click(function(){
+		$body.removeClass('ie6');
+		$('#ie6-warning').hide();
+	})
+</script>
+<![endif]-->
+<div class="inner" style="height:1600px;">
+	<h2>弹出层</h2>
+	<a class="btn btn-s" data-toggle="modal" data-target="#myModal">圆角弹出层</a>
+	<a class="btn btn-s" data-toggle="modal" data-target="#knowledgeSet">普通弹出框</a>
+	<h2>返回顶部</h2>
+	<a class="back-to-top" href="javascript:void(0)">返回顶部</a>
+</div>
+<!----------------         弹出框 开始          ------------------->
+<div class="modal modal-complex" id="myModal">
+	<div class="modal-content">
+		<div class="hd-l">
+			<div class="hd-r">
+				<div class="hd">
+					<h2 class="modal-title">设置</h2>
+					<button type="button" class="modal-close" data-dismiss="modal">&times;</button>
+				</div>
+			</div>		
+		</div>
+		<div class="bd-l">
+			<div class="bd-r">
+				<div class="bd">
+					<p class="msg-text">家长您好！开学以来，孩子表现不错，课堂上认真听讲，请您及时表扬孩子。如果孩子能积极发言那就更好了，你可以引导孩子大声朗读经典文章，提高孩子语言表达能力，鼓励他大胆发言，锻炼孩子在众人面前发表自己言论的胆量，培养他的自信。相信孩子会有更大的进步的！</p>
+					<p class="msg-text">家长您好！开学以来，孩子表现不错，课堂上认真听讲，请您及时表扬孩子。如果孩子能积极发言那就更好了，你可以引导孩子大声朗读经典文章，提高孩子语言表达能力，鼓励他大胆发言，锻炼孩子在众人面前发表自己言论的胆量，培养他的自信。相信孩子会有更大的进步的！</p>
+					<p class="msg-mate">
+						<span class="msg_from">来自<a href="javascript:void(0)">张萌老师</a></span>
+						<span class="msg_handle fn-fr"><a href="javascript:void(0)">参与互动</a>&nbsp;|&nbsp;<a href="javascript:void(0)">转发（3）</a></span>
+					</p>
+				</div>
+			</div>			
+		</div>
+		<div class="ft-l">
+			<div class="ft-r">
+				<div class="ft">
+					<a class="btn btn-s" href="javascript:void(0);">确定</a>
+					<a class="btn btn-s" data-dismiss="modal" href="javascript:void(0);">取消</a>
+				</div>
+			</div>		
+		</div>
+	</div>
+</div>
+
+<div class="modal" id="knowledgeSet">
+	<div class="modal-content">
+		<div class="hd">
+			<h2 class="modal-title">设置</h2>
+			<button type="button" class="modal-close" data-dismiss="modal">&times;</button>
+		</div>
+		<div class="bd">
+			内容
+		</div>
+		<div class="ft">
+			<a class="btn btn-s" href="javascript:void(0);">确定</a>
+			<a class="btn btn-s" data-dismiss="modal" href="javascript:void(0);">取消</a>
+		</div>
+	</div>
+</div>
+
+<!----------------         弹出框 结束          ------------------->
+<script src="../js/jquery.js"></script>
+<script src="../js/myscript.js"></script>
+</body>
+</html>

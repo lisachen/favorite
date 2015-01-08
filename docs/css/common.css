@@ -1,0 +1,357 @@
+.inner {
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+}
+/*sprits*/
+.sprits{
+	background: url(../images/sprits.png) no-repeat;
+	_background: url(../images/sprits.gif) no-repeat;
+}
+
+/*导航*/
+.breadcrumb {
+	padding-left: 30px;
+	background-color: #F2F9FD;
+	background-position: -276px -339px;
+	margin-bottom: 16px;
+}
+.breadcrumb, .breadcrumb a {
+	line-height: 30px;
+	color: #0185d0;
+}
+.breadcrumb a, .breadcrumb span { padding: 0 4px; }
+/*-- 文章列表 --*/
+.newsLi li {
+	position: relative;
+	line-height: 24px;
+ *zoom:1;
+}
+.newsLi .title {
+	display: inline-block;
+	padding-left: 8px;
+	background-position: -295px -693px;
+	color: #777;
+}
+.newsLi .mate {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -12px;
+	color: #AAA9A9;
+}
+/*-- 图文左右 --*/
+.imgTxt-lr {
+	overflow: hidden;
+}
+.imgTxt-lr li {
+	float: left;
+	width: 226px;
+	margin: 0 8px 10px 0;
+	overflow: hidden;
+}
+.imgArea {
+	float: left;
+	display: inline-block;
+	width: 120px;
+	height:90px;
+	margin-right: 10px;
+	padding: 2px;
+	border: 1px solid #DCDCDC;
+}
+.txtArea a {
+	color: #007fc7;
+	font-weight: bold;
+}
+.txtArea p {
+	padding-top: 10px;
+	color: #777;
+}
+/*-- 图文上下 --*/
+.imgTxt-ud {
+	text-align:justify;
+	font-size:0;
+	overflow: hidden;
+}
+.imgTxt-ud li {
+	display:inline-block;
+	/*float: left;
+	_display: inline;*/
+	width: 60px;
+	margin:0 10px;
+	text-align: center;
+}
+.imgTxt-ud *{
+	display:inline;
+}
+.imgTxt-ud a {
+	color: #444;		
+}
+.imgTxt-ud img {
+	width: 60px;
+	height: 60px;
+}
+.imgTxt-ud p a{
+	line-height:2;
+	font-size:12px;
+}
+/*-- 留言框 --*/
+.message-box {
+	position: relative;
+}
+.message-box li {
+	position: relative;
+	overflow: hidden;
+	margin: 10px 0;
+}
+.msgObj {
+	display: block;
+	width: 60px;
+	height: 60px;
+	border: 1px solid #EBEBEB;
+}
+.msgArea {	
+	float: right;
+	margin-left: 80px;
+	margin-top: -61px;
+}
+.msg{
+	position: relative;
+	padding: 6px 10px;
+	border: 1px solid #F3F1F2;
+	background-color: #FAFAFA;	
+}
+.message-box .msg:hover{
+	border: 1px solid #D1E1F1;
+	background-color: #F2F5FA;
+}
+.msg-text {
+	margin-bottom: 16px;
+	line-height: 1.8;
+	color: #666;
+}
+.msg-mate {
+	color: #a7a6a6;
+}
+.msg-mate a {
+	color: #6CBAE4;
+}
+.msg-handle a {
+	color: #0A8CD2;
+}
+.arrow {
+	position: absolute;
+	top: -2px;
+	left: -10px;
+	display: inline-block;
+	width: 12px;
+	height: 11px;
+	background-position: -258px -136px;
+	z-index: 1;
+	overflow: hidden;
+}
+.message-box li:hover .arrow {
+	background-position: -258px -147px;
+}
+/*-- table --*/
+.table{
+	width:100%;
+	max-width:100%;
+}
+.table td,
+.table th {
+	padding: 4px 10px;
+	text-align: left;
+}
+.table thead {
+	background-color: #E8F2FB;
+	font-weight: bold;
+	font-size: 14px;
+	color: #000;
+}
+.table tbody tr:nth-child(even) { background-color: #F5F5F5; }
+/*-- 标签切换 tab --*/
+.tab-nav {
+	position: relative;
+	overflow: hidden;
+}
+.tab-nav li {
+	float: left;
+	text-align: center;
+	cursor:pointer;
+}
+.tab-nav .cur{
+	border-bottom:2px solid red;
+}
+.tab-content .tab-pane{
+	display:none;
+}
+.tab-content .cur {
+	display:block;
+}
+/*-- 弹出框 --*/
+.modal-open{
+	position:relative;
+	overflow:hidden;
+	*zoom:1;
+}
+.modal {
+	display: none;
+	position: fixed;
+	_position:absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1050;
+	overflow:auto;
+}
+.modal-content{
+	position:relative;
+	width:540px;
+	margin:0 auto;
+	background-color:#fff;
+	border:1px solid #ddd;
+	z-index: 9999;
+}
+.modal .modal-close{
+	position: absolute;
+	top: 0;
+	right:4px;
+	height:46px;
+	border:none;
+	background:none;
+	font-size: 20px;
+	color:#fff;
+	cursor: pointer;
+}
+.modal .modal-close:hover{
+	color:#ddd;
+}
+.modal .hd {
+	height: 46px;
+	padding: 0 10px;
+	background-color: #0895DA;
+	overflow: hidden;
+}
+.modal .modal-title {
+	font: 16px/46px 'Microsoft Yahei';
+	color: #fff;
+}
+.modal .bd { padding: 4px 10px; }
+.modal .ft {
+	margin: 10px 10px 0 10px;
+	text-align: center;
+	border-top: 1px solid #d4dce3;
+	padding: 10px;
+}
+.modal .ft a { margin: 0 2px; }
+.modal-backdrop{
+	position: fixed;
+	_position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	background: #666;
+	filter: alpha(opacity=20);
+	opacity: .2;
+}
+/*modal-complex 切图合成*/
+.modal-complex .modal-content{
+	background:none;
+}
+.modal-complex .hd{
+	padding-top:10px;
+	background:url(../images/modal-complex.png) repeat-x 0 -124px;
+}
+.modal-complex .hd-l{
+	padding-left:30px;
+	background:url(../images/modal-complex.png) no-repeat 0 0;
+}
+.modal-complex .hd-r{
+	padding-right:30px;
+	background:url(../images/modal-complex.png) no-repeat right -62px;
+}
+.modal-complex .bd{
+	background:#fff;
+}
+.modal-complex .bd-l{
+	padding-left:10px;
+	background:url(../images/modal-complex-bdl.png) repeat-y;
+}
+.modal-complex .bd-r{
+	padding-right:10px;
+	background:url(../images/modal-complex-bdr.png) repeat-y right top;
+}
+.modal-complex .ft{
+	margin:0;
+	padding:10px 0;
+	height:40px;
+	background:url(../images/modal-complex.png) repeat-x 0 -342px;
+	overflow:hidden;
+}
+.modal-complex .ft-l{
+	padding-left:30px;
+	background:url(../images/modal-complex.png) no-repeat 0 -186px;
+}
+.modal-complex .ft-r{
+	padding-right:30px;
+	background:url(../images/modal-complex.png) no-repeat right -264px;
+}
+.modal-complex .modal-close{
+	top:12px;
+	right:20px;	
+}
+/*-- 页码 --*/
+.pageNav {
+	margin: 20px 0;
+	text-align: center;
+	color: #4e4e4e;
+	line-height: 18px;
+}
+.pageNav a {
+	display: inline-block;
+	height: 19px;
+	padding: 0 4px;
+	margin: 0 2px;
+	border: 1px solid #C8C8C8;
+	background-color: #F8F8F8;
+	color: #4e4e4e;
+}
+.pageNav .cur {
+	color: #0185D0;
+	border-color: #0185D0;
+	font-weight: bold;
+}
+.pageNav .btn {
+	padding: 0;
+	margin-left: 4px;
+	border: none;
+}
+.pageNav input {
+	width: 3em;
+	margin: 0 4px 0 30px;
+	height: 16px;
+	background-color: #F8F8F8;
+	border: 1px solid #C8C8C8;
+}
+/*-- 返回顶部 --*/
+.back-to-top{
+	display:none;
+	position: fixed;
+	right:10px;
+	bottom: 20px;
+	width: 40px;
+	height:40px;
+	background:url(../images/top_bg.png) no-repeat;
+	line-height:100;
+	font-size:0;
+	overflow:hidden;
+}
+.back-to-top:hover{
+	background-position:left bottom;
+}
