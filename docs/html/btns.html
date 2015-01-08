@@ -1,19 +1,23 @@
 <!doctype html>
 <!--[if lt IE 9]><html class="lte-ie8" lang="zh-CN"><![endif]-->
 <!--[if gt IE 8]><!-->
+<!doctype html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="zh-CN"><![endif]-->
+<!--[if gt IE 8]><!-->
 <html lang="zh-CN">
 <!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<meta name="keywords" content="这是里是关键字">
-<meta name="description" content=" 网站内容描述">
-<meta name="author" content="网站作者">
+<meta name="keywords" content="前端,HTML,css,css3,javascript,jquery">
+<meta name="description" content="用css实现图片替换文本的方法介绍分析">
+<meta name="author" content="Lisa Chen">
 <link rel="shortcut icon" href="images/favicon.ico">
-<title>按钮</title>
+<title>btns</title>
 <link href="../css/public.css" rel="stylesheet">
-<link href="../css/common.css" rel="stylesheet">
 <link href="../css/page.css" rel="stylesheet">
-<link href="../css/btn.css" rel="stylesheet">
+<link href="../css/btns.css" rel="stylesheet">
+<link href="../highlight/styles/github.css" rel="stylesheet">
+<script src="../js/jquery.js"></script>
 </head>
 <body>
 <!--[if  IE 6]> 
@@ -32,71 +36,344 @@
 	})
 </script>
 <![endif]-->
-<div class="wrapper inner">
+<style>
+	.btn-01{
+		display:inline-block;
+		background:url(../images/btn_sprits.png) no-repeat right top;
+	}
+	.btn-01 span{
+		display:inline-block;
+		height:26px;
+		line-height:26px;
+		padding:0 20px;
+		background:url(../images/btn_sprits.png) no-repeat left -26px;
+		color:#fff;
+	}
+	.btn-02{
+		display:inline-block;
+		height: 26px;
+		padding:0 20px;
+		line-height:26px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		background-color: #9cbc90;
+		color:#fff;
+		background-image: -webkit-linear-gradient(bottom, #ff7200, #ffa904);
+		background-image: -moz-linear-gradient(bottom, #ff7200, #ffa904);
+		background-image: -o-linear-gradient(bottom, #ff7200, #ffa904);
+		background-image: -ms-linear-gradient(bottom, #ff7200, #ffa904);
+		background-image: linear-gradient(to top, #ff7200, #ffa904);
+	}
+</style>
+<nav class="topNav"></nav>
+<div class="wrapper-box inner">
+	<h1 class="article-Title">按钮</h1>
 	<!--按钮 开始-->
-	<h2>button按钮</h2>
-	<button class="btn btn-default" type="button">默认</button>
-	<button class="btn btn-primary" type="button">主要的</button>
-	<button class="btn btn-success" type="button">success</button>
-	<button class="btn btn-info" type="button">info</button>
-	<button class="btn btn-warning" type="button">warning</button>
-	<button class="btn btn-danger" type="button">danger</button>
-	<button class="btn btn-link" type="button">link</button>
-	<hr>
-	<h2>a按钮</h2>
-	<a class="btn btn-default" href="javascript:void(0)">默认</a>
-	<a class="btn btn-primary" href="javascript:void(0)">主要的</a>
-	<a class="btn btn-success" href="javascript:void(0)">success</a>
-	<a class="btn btn-info" href="javascript:void(0)">info</a>
-	<a class="btn btn-warning" href="javascript:void(0)">warning</a>
-	<a class="btn btn-danger" href="javascript:void(0)">danger</a>
-	<a class="btn btn-link" href="javascript:void(0)">link</a>
-	<!--按钮 结束-->
-	<hr>
-	<h2>圆角渐变按钮</h2>
-	<div class="case">
-		<a class="btn-01"><span>使用图片滑动门</span></a>
-		<a class="btn-01"><span>按钮</span></a>
+	<div class="box">
+		<h2>button按钮</h2>
+		<button class="btn btn-default" type="button">默认</button>
+		<button class="btn btn-primary" type="button">主要的</button>
+		<button class="btn btn-success" type="button">success</button>
+		<button class="btn btn-info" type="button">info</button>
+		<button class="btn btn-warning" type="button">warning</button>
+		<button class="btn btn-danger" type="button">danger</button>
+		<button class="btn btn-link" type="button">link</button>
 	</div>
-	<p>优点：兼容IE7及以上浏览器，只用了两个标签,按钮内字数可扩展</p>
-	<p>缺点：使用透明图片IE6不支持，圆角处需填充背景色，再背景不同的环境下按钮不能通用</p>
-	<hr>
-	<a class="btn-02">使用css3</a>
-	<a class="btn-02">按钮</a>
+	<div class="box">
+		<h2>a按钮</h2>
+		<a class="btn btn-default" href="javascript:void(0)">默认</a>
+		<a class="btn btn-primary" href="javascript:void(0)">主要的</a>
+		<a class="btn btn-success" href="javascript:void(0)">success</a>
+		<a class="btn btn-info" href="javascript:void(0)">info</a>
+		<a class="btn btn-warning" href="javascript:void(0)">warning</a>
+		<a class="btn btn-danger" href="javascript:void(0)">danger</a>
+		<a class="btn btn-link" href="javascript:void(0)">link</a>
+	</div>	
+	<!--按钮 结束-->
+	<div class="box">
+		<h2>圆角渐变按钮</h2>
+		<div class="case">
+			<a class="btn-01"><span>使用图片滑动门</span></a>
+			<a class="btn-01"><span>按钮</span></a>
+			<pre class="css"><code>.btn-01{
+	display:inline-block;
+	background:url(../images/btn_sprits.png) no-repeat right top;
+}
+.btn-01 span{
+	display:inline-block;
+	height:26px;
+	line-height:26px;
+	padding:0 20px;
+	background:url(../images/btn_sprits.png) no-repeat left -26px;
+	color:#fff;
+}</code></pre>
+		</div>
+		<p>优点：兼容IE7及以上浏览器，只用了两个标签,按钮内字数可扩展</p>
+		<p>缺点：高度不可扩展，使用透明图片IE6不支持，圆角处需填充背景色，再背景不同的环境下按钮不能通用</p>
+		<hr>
+		<a class="btn-02">使用css3</a>
+		<a class="btn-02">按钮</a>	
+		<pre class="css"><code>.btn-02{
+	display:inline-block;
+	height: 26px;
+	padding:0 20px;
+	line-height:26px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color: #9cbc90;
+	color:#fff;
+	background-image: -webkit-linear-gradient(bottom, #ff7200, #ffa904);
+	background-image: -moz-linear-gradient(bottom, #ff7200, #ffa904);
+	background-image: -o-linear-gradient(bottom, #ff7200, #ffa904);
+	background-image: -ms-linear-gradient(bottom, #ff7200, #ffa904);
+	background-image: linear-gradient(to top, #ff7200, #ffa904);
+}	</code></pre>
+	</div>
+	<div class="box">
+		<h2>按压按钮效果</h2>
+		<button class="press-btn">Button</button><button class="press-btn active">active</button>
+		<style>
+		.press-btn{
+			display: inline-block;
+			margin: 0 10px 0 0;
+			padding: 6px 20px;
+			font:16px/1.8 'Microsoft Yahei';
+			color: #FFF;
+			vertical-align: bottom;		
+			background-color: #6496C8;
+			border: none;
+			-webkit-border-radius: 8px;
+			-moz-border-radius: 8px;
+			border-radius: 8px;
+			-webkit-box-shadow: 0 6px #27496D;
+			-moz-box-shadow: 0 6px #27496d;
+			box-shadow: 0 6px #27496D;
+		}
+		.press-btn:hover{
+			background-color: #417CB8;
+		}
+		.press-btn:active, .press-btn.active{
+			background-color: #417CB8;
+			-webkit-box-shadow: 0 3px #27496D;
+			-moz-box-shadow: 0 3px #27496d;
+			box-shadow: 0 3px #27496D;
+			-webkit-transform: translateY(3px);
+			-moz-transform: translateY(3px);
+			-ms-transform: translateY(3px);
+			-o-transform: translateY(3px);
+			transform: translateY(3px);
+		}
+		</style>
+	</div>
+	<div class="box">
+		<h2>单选/复选按钮</h2>
+		<h3>单选</h3>
+		<div class="btn-group">
+			<label class="btn radio-btn checked"><input type="radio" name="xx" checked>单选按钮1</label>
+			<label class="btn radio-btn"><input type="radio" name="xx">单选按钮2</label>
+		</div>
+		<h3>复选</h3>
+		<div class="btn-group">
+			<label class="btn checkbox-btn"><input type="checkbox" name="1">游泳</label>
+			<label class="btn checkbox-btn"><input type="checkbox" name="1">旅游</label>
+			<label class="btn checkbox-btn"><input type="checkbox" name="1">其他</label>
+		</div>
+		<h4>HTML:</h4>
+		<pre><code>&lt;h3&gt;单选&lt;/h3&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+	&lt;label class=&quot;btn radio-btn checked&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;xx&quot; checked&gt;单选按钮1&lt;/label&gt;
+	&lt;label class=&quot;btn radio-btn&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;xx&quot;&gt;单选按钮2&lt;/label&gt;
+&lt;/div&gt;
+&lt;h3&gt;复选&lt;/h3&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+	&lt;label class=&quot;btn checkbox-btn&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;1&quot;&gt;游泳&lt;/label&gt;
+	&lt;label class=&quot;btn checkbox-btn&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;1&quot;&gt;旅游&lt;/label&gt;
+	&lt;label class=&quot;btn checkbox-btn&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;1&quot;&gt;其他&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+		<h4>CSS:</h4>
+		<pre><code>.btn-group{
+	_padding-left:1px;
+	overflow:hidden;
+	*zoom:1	
+}
+.btn-group label{
+	float:left;
+	margin-left:-1px;
+}
+.btn-group .checked{
+	background-color:#f0f0f0;
+}
+.btn-group .btn:first-child {
+	margin-left: 0;
+}
+.btn-group>.btn:first-child:not(:last-child){
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.btn-group>.btn:not(:first-child):not(:last-child){
+	border-radius: 0;
+}	
+.btn-group>.btn:last-child:not(:first-child){
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.btn-group input{
+	position: absolute;
+	clip: rect(0 0 0 0);/* for Ie7及以下*/
+	clip: rect(0,0,0,0);
+	pointer-events: none;
+	*star:expression(this.onFocus=this.blur()); /* for Ie7及以下*/ 
+}</code></pre>
+	</div>
 	<style>
-		.btn-01{
-			display:inline-block;
-			background:url(../images/btn_sprits.png) no-repeat right top;
+		.btn-group{
+			_padding-left:1px;
+			overflow:hidden;
+			*zoom:1	
 		}
-		.btn-01 span{
-			display:inline-block;
-			height:26px;
-			line-height:26px;
-			padding:0 20px;
-			background:url(../images/btn_sprits.png) no-repeat left -26px;
-			color:#fff;
+		.btn-group label{
+			float:left;
+			margin-left:-1px;
 		}
-		.btn-02{
-			display:inline-block;
-			height: 26px;
-			padding:0 20px;
-			line-height:26px;
-			-webkit-border-radius: 4px;
-			-moz-border-radius: 4px;
-			border-radius: 4px;
-			background-color: #9cbc90;
-			color:#fff;
-			background-image: -webkit-linear-gradient(bottom, #ff7200, #ffa904);
-			background-image: -moz-linear-gradient(bottom, #ff7200, #ffa904);
-			background-image: -o-linear-gradient(bottom, #ff7200, #ffa904);
-			background-image: -ms-linear-gradient(bottom, #ff7200, #ffa904);
-			background-image: linear-gradient(to top, #ff7200, #ffa904);
+		.btn-group .checked{
+			background-color:#f0f0f0;
+		}
+		.btn-group .btn:first-child {
+			margin-left: 0;
+		}
+		.btn-group>.btn:first-child:not(:last-child){
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+		.btn-group>.btn:not(:first-child):not(:last-child){
+			border-radius: 0;
+		}	
+		.btn-group>.btn:last-child:not(:first-child){
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+		.btn-group input{
+			position: absolute;
+			clip: rect(0,0,0,0);
+			clip: rect(0 0 0 0);
+			pointer-events: none;
+			*star:expression(this.onFocus=this.blur()); /* for Ie*/ 
 		}
 	</style>
+	<div class="box">
+		<h2>按钮loading</h2>
+		<a href="javascript:void(0)" id="btn-loadding" class="btn">按钮</a>
+		<style>
+			.btn-loadding{
+				color: transparent;
+				background:#f0f0f0 url(../images/loading_s.gif) no-repeat center;
+				cursor: default;
+    			pointer-events: none;
+			}
+		</style>
+		<script>
+			$(function(){
+				var $btnLd=$('#btn-loadding');
+				$btnLd.click(function(){
+					if(!$(this).hasClass('btn-loadding')){
+						$(this).addClass('btn-loadding');
+						setTimeout(function(){
+							$btnLd.removeClass('btn-loadding');
+						},2000);
+					}
+				})
+			})
+		</script>
+	</div>
+	
+	
+	<div class="box">
+		<h2>进度条按钮</h2>
+		<button class="progress-btn"><span class="content">提交</span><span class="progress"><span class="progress-inner"></span></span></button>
+		<style>
+		.progress-btn {
+			position: relative;
+			display: inline-block;
+			width:140px;
+			padding:0;
+			background: #1d9650;
+			color: #fff;
+			outline:none;
+			border:none;
+			font:14px/3 'Microsoft Yahei';
+			overflow:hidden;
+		}
+		.progress-btn .progress {
+			background: #148544;
+		}
+		.progress-btn .progress-inner {
+			position: absolute;
+			left: 0;
+			top:0;
+			width: 0;
+			height: 100%;
+			background: #0E7138;
+		}
+		.state-loading .progress-inner{
+			width:100%;
+			-webkit-transition: width 5s;
+			transition: width 5s;
+		}
+		.progress-btn .content {
+			position: relative;
+			display: block;
+			z-index:9;
+			-webkit-transition:all .6s;
+			transition: all .6s;
+		}
+		.progress-btn .content::before,
+		.progress-btn .content::after {
+			position:absolute;
+			top: 100%;
+			left:0;
+			right:0;
+			width:100%;
+		}
+		.progress-btn .content::before{
+			top:-100%;	
+		}
+		.progress-btn.state-success .content{
+			-webkit-transform: translateY(-100%);
+			transform: translateY(-100%);
+		}
+		.progress-btn.state-error .content {	
+			-webkit-transform: translateY(100%);
+			transform: translateY(100%);
+		}
+		.progress-btn .content::before {
+			content: "提交失败"; /* Cross for error */
+		}
+		.progress-btn .content::after {
+			content: "提交成功"; /* Checkmark for success */
+		}
+		</style>
+	</div>
 </div>
 
-<!----------------         弹出框 结束          ------------------->
-<script src="../js/jquery.js"></script>
 <script src="../js/myscript.js"></script>
+<script src="../highlight/highlight.pack.js"></script>
+<script>
+ hljs.initHighlightingOnLoad('html','css');
+	$(function(){
+		$('.progress-btn').click(function(){
+			var $this=$(this);
+			$this.find('.progress-inner').removeClass('notransition');
+			$this.addClass('state-loading');
+			setTimeout(function(){
+				$this.removeClass('state-loading').addClass('state-success');
+				setTimeout(function(){
+					$this.removeClass('state-success');
+				},2000);
+			},5000)
+		})
+	})
+</script>
 </body>
 </html>

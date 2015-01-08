@@ -1,0 +1,55 @@
+body{
+	background:fixed url(../jl/images/bg.jpg) no-repeat top center;
+	background-size:cover;
+}
+.content{
+	width:680px;
+	margin:30px auto;
+	min-height:600px;
+	background-color:#fff;
+	padding: 10px 130px;
+	opacity: .9;
+}
+.post-header h1, .post-header h2 {
+font-size: 32px;
+margin: 0 0 45px;
+position: relative;
+text-align: center;
+}
+.post-header h1 a, .post-header h2 a {
+color: #363636;
+display: block;
+
+padding: 65px 70px 20px 70px;
+font-size: 36px;
+font-weight: 500;
+line-height: 1.1;
+position: relative;
+}
+.post-header h1 a:before, .post-header h2 a:before {
+	border-top: 1px solid #E5E5E5;
+	bottom: -4px;
+	content: "";
+	left: 50%;
+	margin: 0 0 0 -27%;
+	position: absolute;
+	width: 60%;
+}
+.post-header h1:after, .post-header h2:after {
+	border-top: 1px solid #E5E5E5;
+	bottom: 0;
+	content: "";
+	left: 50%;
+	margin: 0 0 0 -30%;
+	position: absolute;
+	width: 60%;
+}
+.post-header h1 a:after, .post-header h2 a:after {
+	border-top: 1px solid #E5E5E5;
+	bottom: -3px;
+	content: "";
+	left: 50%;
+	margin: 0 0 0 -28%;
+	position: absolute;
+	width: 60%;
+}

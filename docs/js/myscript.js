@@ -4,6 +4,9 @@
 		$('#ie6-warning').hide();
 	})
 	
+	//load
+	$(".topNav").load("g-nav.html .navs");
+	
 	//tab
 	$(".tab-nav li").click(function() {
 		var _this=$(this),

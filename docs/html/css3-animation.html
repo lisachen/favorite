@@ -14,6 +14,7 @@
 <link href="../css/common.css" rel="stylesheet">
 <link href="../css/page.css" rel="stylesheet">
 <link href="../css/animate.css" rel="stylesheet">
+<link href="../highlight/styles/github.css" rel="stylesheet">
 <style>
 body{
 	font-family: 'Microsoft Yahei';
@@ -50,12 +51,12 @@ body{
 }
 .t-lg li{
 	float:left;
-	width:30%;
+	width:46.6%;
 	padding:10px 1%;
 	margin:4px .4%;
 	border:1px dashed #ddd;
-	min-height:200px;
-			-webkit-animation: enter 0.5s ease-out;
+	min-height:260px;
+	-webkit-animation: enter 0.5s ease-out;
 	-moz-animation: enter 0.5s ease-out;
 	-ms-animation: enter 0.5s ease-out;
 	animation: enter 0.5s ease-out;
@@ -87,488 +88,489 @@ body{
 	})
 </script>
 <![endif]-->
-<div class="inner">
-<ul class="t-m fn-clearfix">
-	<li>
-		<h2>fadeIn</h2>
-		<div class="fadeIn">
-			<img src="../images/default/img_120x90.jpg" alt="">
-		</div>
-	</li>
-	<li>	
-		<h2>topIn</h2>
-		<div class="topIn">
-			<img src="../images/default/img_120x90.jpg" alt="">
-		</div>
-	</li>
-	<li>	
-		<h2>leftIn</h2>
-		<div class="leftIn">
-			<img src="../images/default/img_120x90.jpg" alt="">
-		</div>
-	</li>
-	<li>	
-		<h2>rightIn</h2>
-		<div class="rightIn">
-			<img src="../images/default/img_120x90.jpg" alt="">
-		</div>
-	</li>
-	<li>	
-		<h2>shake</h2>
-		<div class="shake">
-			<img src="../images/default/img_120x90.jpg" alt="">
-		</div>
-	</li>
-	<li>	
-		<h2>rScale </h2>
-		<div class="rScale">
-			<img src="../images/default/img_120x90.jpg" alt="">
-		</div>
-	</li>
-	<li>	
-		<h2>rotate</h2>
-		<div class="rotate">
-			<img src="../images/default/img_120x90.jpg" alt="">
-		</div>
-	</li>
-	<li>	
-		<h2>oScale</h2>
-		<div class="oScale">
-			<img src="../images/default/img_120x90.jpg" alt="">
-		</div>
-	</li>
-	<li>	
-		<h2>bounceInDown</h2>
-		<div class="bounceInDown">
-			<img src="../images/default/img_120x90.jpg" alt="">
-		</div>
-	</li>
-	<li>	
-		<h2>width_l,tl</h2>
-		<div class="fn-tl">
-			<img class="width_l" src="../images/default/img_120x90.jpg" alt="" height="90">
-		</div>
-	</li>
-	<li>	
-		<h2>width_l,tc</h2>
-		<div class="fn-tc">
-			<img class="width_l" src="../images/default/img_120x90.jpg" alt="" height="90">
-		</div>
-	</li>	
-	<li>	
-		<h2>width_l,tr</h2>
-		<div class="fn-tr">
-			<img class="width_l" src="../images/default/img_120x90.jpg" alt="" height="90">
-		</div>
-	</li>
-	<li>	
-		<h2>width_l,tl</h2>
-		<p>没有设置高度</p>
-		<div class="fn-tl">
-			<img class="width_l" src="../images/default/img_120x90.jpg" alt="">
-		</div>
-	</li>
-	<li>	
-		<h2>width_l,tc</h2>
-		<p>没有设置高度</p>
-		<div class="fn-tc">
-			<img class="width_l" src="../images/default/img_120x90.jpg" alt="">
-		</div>
-	</li>	
-	<li>	
-		<h2>width_l,tr</h2>
-		<p>没有设置高度</p>
-		<div class="fn-tr">
-			<img class="width_l" src="../images/default/img_120x90.jpg" alt="">
-		</div>
-	</li>
-</ul>
-<ul class="t-lg fn-clearfix">
-<li>
-	<p class="t-like" data-alt="我喜欢"><a href="javascript:void(0)">我喜欢</a><p>
-	<style>
-		.t-like{
-			position:relative;
-			font:16px/38px 'Microsoft Yahei';
-		}
-		.t-like a{
-			position: relative;
-			display: block;
-			width: 38px;
-			height: 38px;
-			margin: 10px 0 0;
-			text-decoration:none;
-			text-indent: 50px;
-			text-shadow: #999 0 1px 0;
-			white-space: nowrap;
-			background: #D91E76 url(../images/test/like.png) 7px 10px no-repeat;
-			background-color: rgba(217, 30, 118, 0.42);
-			color: #FAFAFA;
-			overflow:hidden;
-			z-index: 5;
-			-webkit-border-radius: 19px;
-			-moz-border-radius: 19px;
-			border-radius: 19px;
-			-webkit-transition: width .25s ease-in-out, background-color .25s ease-in-out;
-			-moz-transition: width .25s ease-in-out, background-color .25s ease-in-out;
-			-o-transition: width .25s ease-in-out, background-color .25s ease-in-out;
-			transition: width .25s ease-in-out, background-color .25s ease-in-out;
-			-webkit-box-shadow: rgba(0, 0, 0, 0.28) 0 2px 3px;
-			-moz-box-shadow: rgba(0,0,0, .28) 0 2px 3px;
-			-o-box-shadow: rgba(0,0,0, .28) 0 2px 3px;
-			box-shadow: rgba(0, 0, 0, 0.28) 0 2px 3px;
-		}
-		.t-like a:hover{
-			width:208px;
-			background-color: #D91E76;
-		}
-		.t-like:after {
-			position: absolute;
-			left: 50px;
-			top: 0;
-			display: block;
-			content: attr(data-alt);
-			color: #141414;
-			z-index: 2;
-		}
-	</style>
-</li>
-<li>
-	<a href="javascript:void(0)"><img src="../images/test/dw.png" alt=""></a>
-	<buttom id="t-btn">按钮</buttom>
-	<style>
-			
-	</style>
-</li>
-<li>
-	<div style="height:150px; margin:20px 0;background-color: #2C016C; ">
-		<div class="t-cloud">
-			<a href="javascript:void(0)"><span>星座频道</span></a>
-		</div>	
-	</div>								
-	<style>
-		.t-cloud{
-			width: 158px;
-			height: 125px;
-			-webkit-animation: bounceInDown 1s .2s ease both;
-			-moz-animation: bounceInDown 1.5s .2s ease both;
-			-ms-animation: bounceInDown 1s .2s ease both;
-			-o-animation: bounceInDown 1s .2s ease both;
-		}
-		.t-cloud a{
-			display: block;
-			background: url(../images/test/bg_txt.png) no-repeat -3px -20px;
-			height: 100%;
-			width: 100%;
-			-webkit-transition:ease all;
-			-moz-transition:ease all;
-			-ms-transition: ease all;
-			-o-transition: ease all;
-			-webkit-transition-duration:.5s;
-			-moz-transition-duration:.5s;
-			-ms-transition-duration:.5s;
-			-o-transition-duration:.5s;	
-		}
-		.t-cloud a:hover {
-			padding-top:20px;
-			background-position: -3px -5px;
-			-moz-transition: all .2s linear;
-			-webkit-transition: all .2s linear;
-			-ms-transition: all .2s linear;
-			-o-transition: all .2s linear;
-		}
-		.t-cloud a span {
-			 display: block;
-			 height: 100%;
-			 width: 100%; 
-			 background: url(../images/test/subnav_txt.png) no-repeat; 
-			 background-position: 24px 15px;
-			 text-indent: -999em; 
-			 cursor: pointer;
-		}
-		.starsign_nav a:hover span { 
-			background-position: 18px -104px; 
-		}
-	</style>
-</li>
-<li>	
-	<div class="t-xz">
-		<a title="白羊座"  href="javascript:void(0)">
-			<img src="../images/test/star01.png" alt="白羊座">
-			<span class="t-icon-tit">白羊座</span>
-		</a>
-	</div>
-	<style>
-		.t-xz a{
-			position: relative;
-			display: block;
-			height: 82px;
-			width: 80px;
-			background: url(../images/test/bg_staricon.png) no-repeat;
-		}
-		.t-xz img{
-			position: absolute;
-			left: 8px;
-			display: inline-block;
-			vertical-align: top;
-			width: 60px;
-			height: 60px;	
-		}
-		.t-xz span{
-			position: absolute;
-			top: 30px;
-			display: block;
-			width: 77px;
-			height: 50px;
-			text-align: center;
-			background: url(../images/test/bg_startit.png) no-repeat;
-			font: bold 12px/50px "Microsoft YaHei";
-			color: #6969DD;
-			z-index: 2;
-		}
-		.t-xz a:hover img{
-			 margin-top:-15px; 
-			 z-index:3;
-			-webkit-transition: all .2s ease-in;
-				 -o-transition: all .2s ease-in;
-				-ms-transition: all .2s ease-in;
-			   -moz-transition: all .2s ease-in;
-			 -webkit-transform: scale(1.2);   
-				-moz-transform: scale(1.2);
-				 -ms-transform: scale(1.2);
-				  -o-transform: scale(1.2);
-			
-		}
-	</style>
-</li>
-<li>
-	<div class="t-course">
-		<a href="javascript:void(0)">
-			<div class="t-c-img">
-				<img src="../images/test/c300x170.jpg" alt="">
-				<span>你已参加本课程</span>
+<nav class="topNav"></nav>
+<div class="wrapper-box inner">
+	<h1 class="article-Title">css3动画效果</h1>
+	<ul class="t-m fn-clearfix">
+		<li>
+			<h2>fadeIn</h2>
+			<div class="fadeIn">
+				<img src="../images/default/img_120x90.jpg" alt="">
 			</div>
-			<h5>系列：HTML+CSS基础课程</h5>
-			<div class="t-c-intro">
-				<p>8小时带领大家步步深入学习标签的基础知识，掌握各种样式的基本用法。</p>
-				<span class="fn-fl">更新至13-3</span> <span class="fn-fr">课程时长：8小时0分</span>
+		</li>
+		<li>	
+			<h2>topIn</h2>
+			<div class="topIn">
+				<img src="../images/default/img_120x90.jpg" alt="">
 			</div>
-			<div class="t-c-tips"><span class="fn-fl">2014-09-22更新</span> <span class="fn-fr">25773人学习</span></div>
-		</a>
-	</div>
-	<style>
-		.t-course{
-			position: relative;
-			width: 280px;
-			height: 240px;
-			margin: 5px 10px 15px;
-			border-bottom: 2px solid #f7faf9\0/;
-			*border-bottom: 2px solid #f7faf9;
-			background: #fff;
-			background: #f7faf9\0/;
-			*background: #f7faf9;
-			font:12px/24px 'Microsoft Yahei';
-			border-radius: 0 0 1px 1px;
-			box-shadow: 0 1px 2px #c5c5c5;
-			transition: 0.3s;
-			-moz-transition: 0.3s;
-			-webkit-transition: 0.3s;
-			-o-transition: 0.3s;
-		}
-		.t-course:hover {
-			border-bottom: 2px solid #dae0e5\0/;
-			*border-bottom: 2px solid #dae0e5;
-			box-shadow: 0 2px 8px #bbb;
-		}
-		.t-course .t-c-img {
-			position:relative;
-			width: 280px;
-			height: 160px;
-			overflow: hidden;
-		}
-		.t-course .t-c-img img{
-			display:block;
-			width: 280px;
-			height: 160px;
-			-moz-transition: 1s;
-			-webkit-transition: 1s;
-			-o-transition: 1s;
-			transition: 1s;	
-		}
-		.t-course:hover img{
-			transform: scale(1.2);
-			-webkit-transform: scale(1.2);
-		}
-		.t-course .t-c-img span {
-			position: absolute;
-			bottom: -19px;
-			width: 280px;
-			height: 24px;
-			color: #fff;
-			text-align: center;
-			background: #39b94e;
-			z-index: 1;
-			transition: 0.3s;
-			-moz-transition: 0.3s;
-			-webkit-transition: 0.3s;
-			-o-transition: 0.3s;
-		}
-		.t-course:hover span {
-			bottom: 0px;
-			*display: block;
-		}
-		.t-course h5 {
-			margin:0;
-			line-height: 50px;
-			text-align: center;
-			color: #363d40; 
-		}
-		.t-course .t-c-intro {
-			position: absolute;
-			top: 160px;
-			left: 0;
-			display: none\0/;
-			*display: none;
-			width: 252px;
-			padding: 0 14px;
-			opacity: 0;
-			background: #fff;
-			background: #f7faf9\0/;
-			*background: #f7faf9;
-			transition: 0.3s;
-			-moz-transition: 0.3s;
-			-webkit-transition: 0.3s;
-			-o-transition: 0.3s;
-		}
-		.t-course:hover .t-c-intro{
-			color: #656e73;
-			opacity: 1;
-			display: block\0/;
-			*display: block;
-		}
-		.t-course  .t-c-intro p {
-			height: 40px;
-			padding-top: 10px;
-			line-height: 20px;
-		}
-		.t-course  .t-c-intro span {
-			color: #b4bbbf;
-		}
-		.t-course  .t-c-tips {
-			padding: 0 14px;
-			color: #b4bbbf;
-		}	
-	</style>
-</li>
-<li>
-	<div class="t-pao">
-		<span class="t-paobg"></span>
-		<span class="t-paoit"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-	</div>
-	<style>
-		.t-pao{
-			position:relative;
-			height: 186px;
-			overflow: hidden;
-			background-color:#9ED868;
-		}
-		.t-paobg{
-			position:absolute;
-			width:100%;
-			height:186px;
-			background:url(../images/test/pao_bg.png) no-repeat center;
-			z-index:2;
-		}
-		.t-paoit i{
-			position: absolute;
-			top: 100%;
-			width: 53px;
-			height: 56px;
-			overflow: hidden;
-			background:url(../images/test/pao.png) no-repeat;
-			-webkit-animation: paoi 7s 2s infinite;/*无穷大*/
-			-moz-animation: paoi 7s 2s infinite;
-			-ms-animation: paoi 7s 2s infinite;
-			animation: paoi 7s 2s infinite;
-		}
-		.t-paoit i:nth-child(1) {
-			left:0;
-			-webkit-animation-delay: 2s;
-			-moz-animation-delay: 2s;
-			-ms-animation-delay: 2s;
-			animation-delay: 2s;
-		}
-		.t-paoit i:nth-child(2) {
-			left: 85px;
-			-webkit-animation-duration: 6s;
-			-moz-animation-duration: 6s;
-			-ms-animation-duration: 6s;
-			animation-duration: 6s;
-			-webkit-animation-delay: 5s;
-			-moz-animation-delay: 5s;
-			-ms-animation-delay: 5s;
-			animation-delay: 5s;
-			background-position: 0 -64px;
-		}
-		.t-paoit i:nth-child(3) {
-			left: 148px;
-			-webkit-animation-duration: 5s;
-			-moz-animation-duration: 5s;
-			-ms-animation-duration: 5s;
-			animation-duration: 5s;
-			-webkit-animation-delay: 6s;
-			-moz-animation-delay: 6s;
-			-ms-animation-delay: 6s;
-			animation-delay: 6s;
-		}
-		.t-paoit i:nth-child(4) {
-			left: 190px;
-			-webkit-animation-delay: 3s;
-			-moz-animation-delay: 3s;
-			-ms-animation-delay: 3s;
-			animation-delay: 3s;
-			background-position: 0 -140px;
-		}
-		.t-paoit i:nth-child(5) {
-			left: 285px;
-			-webkit-animation-duration: 5s;
-			-moz-animation-duration: 5s;
-			-ms-animation-duration: 5s;
-			animation-duration: 5s;
-			-webkit-animation-delay: 7s;
-			-moz-animation-delay: 7s;
-			-ms-animation-delay: 7s;
-			animation-delay: 7s;
-		}
-		.t-paoit i:nth-child(6) {
-			left: 350px;
-			background-position:0 -64px;
-		}
-		.t-paoit i:nth-child(7) {
-			left: 400px;
-			-webkit-animation-delay: 4s;
-			-moz-animation-delay: 4s;
-			-ms-animation-delay: 4s;
-			animation-delay: 4s;
-		}
-		@-webkit-keyframes paoi { 
-			0% {
-				top:186px;
-			}
-			100% {
-				top:-56px;
-			}
-		}
-	</style>
-</li>
-<li>
-	
-</li>
-</ul>
+		</li>
+		<li>	
+			<h2>leftIn</h2>
+			<div class="leftIn">
+				<img src="../images/default/img_120x90.jpg" alt="">
+			</div>
+		</li>
+		<li>	
+			<h2>rightIn</h2>
+			<div class="rightIn">
+				<img src="../images/default/img_120x90.jpg" alt="">
+			</div>
+		</li>
+		<li>	
+			<h2>shake</h2>
+			<div class="shake">
+				<img src="../images/default/img_120x90.jpg" alt="">
+			</div>
+		</li>
+		<li>	
+			<h2>rScale </h2>
+			<div class="rScale">
+				<img src="../images/default/img_120x90.jpg" alt="">
+			</div>
+		</li>
+		<li>	
+			<h2>rotate</h2>
+			<div class="rotate">
+				<img src="../images/default/img_120x90.jpg" alt="">
+			</div>
+		</li>
+		<li>	
+			<h2>oScale</h2>
+			<div class="oScale">
+				<img src="../images/default/img_120x90.jpg" alt="">
+			</div>
+		</li>
+		<li>	
+			<h2>bounceInDown</h2>
+			<div class="bounceInDown">
+				<img src="../images/default/img_120x90.jpg" alt="">
+			</div>
+		</li>
+		<li>	
+			<h2>width_l,tl</h2>
+			<div class="fn-tl">
+				<img class="width_l" src="../images/default/img_120x90.jpg" alt="" height="90">
+			</div>
+		</li>
+		<li>	
+			<h2>width_l,tc</h2>
+			<div class="fn-tc">
+				<img class="width_l" src="../images/default/img_120x90.jpg" alt="" height="90">
+			</div>
+		</li>	
+		<li>	
+			<h2>width_l,tr</h2>
+			<div class="fn-tr">
+				<img class="width_l" src="../images/default/img_120x90.jpg" alt="" height="90">
+			</div>
+		</li>
+		<li>	
+			<h2>width_l,tl</h2>
+			<p>没有设置高度</p>
+			<div class="fn-tl">
+				<img class="width_l" src="../images/default/img_120x90.jpg" alt="">
+			</div>
+		</li>
+		<li>	
+			<h2>width_l,tc</h2>
+			<p>没有设置高度</p>
+			<div class="fn-tc">
+				<img class="width_l" src="../images/default/img_120x90.jpg" alt="">
+			</div>
+		</li>	
+		<li>	
+			<h2>width_l,tr</h2>
+			<p>没有设置高度</p>
+			<div class="fn-tr">
+				<img class="width_l" src="../images/default/img_120x90.jpg" alt="">
+			</div>
+		</li>
+	</ul>
+	<ul class="t-lg fn-clearfix">
+		<li>
+			<p class="t-like" data-alt="我喜欢"><a href="javascript:void(0)">我喜欢</a><p>
+			<style>
+				.t-like{
+					position:relative;
+					font:16px/38px 'Microsoft Yahei';
+				}
+				.t-like a{
+					position: relative;
+					display: block;
+					width: 38px;
+					height: 38px;
+					margin: 10px 0 0;
+					text-decoration:none;
+					text-indent: 50px;
+					text-shadow: #999 0 1px 0;
+					white-space: nowrap;
+					background: #D91E76 url(../images/test/like.png) 7px 10px no-repeat;
+					background-color: rgba(217, 30, 118, 0.42);
+					color: #FAFAFA;
+					overflow:hidden;
+					z-index: 5;
+					-webkit-border-radius: 19px;
+					-moz-border-radius: 19px;
+					border-radius: 19px;
+					-webkit-transition: width .25s ease-in-out, background-color .25s ease-in-out;
+					-moz-transition: width .25s ease-in-out, background-color .25s ease-in-out;
+					-o-transition: width .25s ease-in-out, background-color .25s ease-in-out;
+					transition: width .25s ease-in-out, background-color .25s ease-in-out;
+					-webkit-box-shadow: rgba(0, 0, 0, 0.28) 0 2px 3px;
+					-moz-box-shadow: rgba(0,0,0, .28) 0 2px 3px;
+					-o-box-shadow: rgba(0,0,0, .28) 0 2px 3px;
+					box-shadow: rgba(0, 0, 0, 0.28) 0 2px 3px;
+				}
+				.t-like a:hover{
+					width:208px;
+					background-color: #D91E76;
+				}
+				.t-like:after {
+					position: absolute;
+					left: 50px;
+					top: 0;
+					display: block;
+					content: attr(data-alt);
+					color: #141414;
+					z-index: 2;
+				}
+			</style>
+		</li>
+		<li>
+			<a href="javascript:void(0)"><img src="../images/test/dw.png" alt=""></a>
+			<buttom id="t-btn">按钮</buttom>
+			<style>
+					
+			</style>
+		</li>
+		<li>
+			<div style="height:150px; margin:20px 0;background-color: #2C016C; ">
+				<div class="t-cloud">
+					<a href="javascript:void(0)"><span>星座频道</span></a>
+				</div>	
+			</div>								
+			<style>
+				.t-cloud{
+					width: 158px;
+					height: 125px;
+					-webkit-animation: bounceInDown 1s .2s ease both;
+					-moz-animation: bounceInDown 1.5s .2s ease both;
+					-ms-animation: bounceInDown 1s .2s ease both;
+					-o-animation: bounceInDown 1s .2s ease both;
+				}
+				.t-cloud a{
+					display: block;
+					background: url(../images/test/bg_txt.png) no-repeat -3px -20px;
+					height: 100%;
+					width: 100%;
+					-webkit-transition:ease all;
+					-moz-transition:ease all;
+					-ms-transition: ease all;
+					-o-transition: ease all;
+					-webkit-transition-duration:.5s;
+					-moz-transition-duration:.5s;
+					-ms-transition-duration:.5s;
+					-o-transition-duration:.5s;	
+				}
+				.t-cloud a:hover {
+					padding-top:20px;
+					background-position: -3px -5px;
+					-moz-transition: all .2s linear;
+					-webkit-transition: all .2s linear;
+					-ms-transition: all .2s linear;
+					-o-transition: all .2s linear;
+				}
+				.t-cloud a span {
+					 display: block;
+					 height: 100%;
+					 width: 100%; 
+					 background: url(../images/test/subnav_txt.png) no-repeat; 
+					 background-position: 24px 15px;
+					 text-indent: -999em; 
+					 cursor: pointer;
+				}
+				.starsign_nav a:hover span { 
+					background-position: 18px -104px; 
+				}
+			</style>
+		</li>
+		<li>	
+			<div class="t-xz">
+				<a title="白羊座"  href="javascript:void(0)">
+					<img src="../images/test/star01.png" alt="白羊座">
+					<span class="t-icon-tit">白羊座</span>
+				</a>
+			</div>
+			<style>
+				.t-xz a{
+					position: relative;
+					display: block;
+					height: 82px;
+					width: 80px;
+					background: url(../images/test/bg_staricon.png) no-repeat;
+				}
+				.t-xz img{
+					position: absolute;
+					left: 8px;
+					display: inline-block;
+					vertical-align: top;
+					width: 60px;
+					height: 60px;	
+				}
+				.t-xz span{
+					position: absolute;
+					top: 30px;
+					display: block;
+					width: 77px;
+					height: 50px;
+					text-align: center;
+					background: url(../images/test/bg_startit.png) no-repeat;
+					font: bold 12px/50px "Microsoft YaHei";
+					color: #6969DD;
+					z-index: 2;
+				}
+				.t-xz a:hover img{
+					 margin-top:-15px; 
+					 z-index:3;
+					-webkit-transition: all .2s ease-in;
+						 -o-transition: all .2s ease-in;
+						-ms-transition: all .2s ease-in;
+					   -moz-transition: all .2s ease-in;
+					 -webkit-transform: scale(1.2);   
+						-moz-transform: scale(1.2);
+						 -ms-transform: scale(1.2);
+						  -o-transform: scale(1.2);
+					
+				}
+			</style>
+		</li>
+		<li>
+			<div class="t-course">
+				<a href="javascript:void(0)">
+					<div class="t-c-img">
+						<img src="../images/test/c300x170.jpg" alt="">
+						<span>你已参加本课程</span>
+					</div>
+					<h5>系列：HTML+CSS基础课程</h5>
+					<div class="t-c-intro">
+						<p>8小时带领大家步步深入学习标签的基础知识，掌握各种样式的基本用法。</p>
+						<span class="fn-fl">更新至13-3</span> <span class="fn-fr">课程时长：8小时0分</span>
+					</div>
+					<div class="t-c-tips"><span class="fn-fl">2014-09-22更新</span> <span class="fn-fr">25773人学习</span></div>
+				</a>
+			</div>
+			<style>
+				.t-course{
+					position: relative;
+					width: 280px;
+					height: 240px;
+					margin: 5px 10px 15px;
+					border-bottom: 2px solid #f7faf9\0/;
+					*border-bottom: 2px solid #f7faf9;
+					background: #fff;
+					background: #f7faf9\0/;
+					*background: #f7faf9;
+					font:12px/24px 'Microsoft Yahei';
+					border-radius: 0 0 1px 1px;
+					box-shadow: 0 1px 2px #c5c5c5;
+					transition: 0.3s;
+					-moz-transition: 0.3s;
+					-webkit-transition: 0.3s;
+					-o-transition: 0.3s;
+				}
+				.t-course:hover {
+					border-bottom: 2px solid #dae0e5\0/;
+					*border-bottom: 2px solid #dae0e5;
+					box-shadow: 0 2px 8px #bbb;
+				}
+				.t-course .t-c-img {
+					position:relative;
+					width: 280px;
+					height: 160px;
+					overflow: hidden;
+				}
+				.t-course .t-c-img img{
+					display:block;
+					width: 280px;
+					height: 160px;
+					-moz-transition: 1s;
+					-webkit-transition: 1s;
+					-o-transition: 1s;
+					transition: 1s;	
+				}
+				.t-course:hover img{
+					transform: scale(1.2);
+					-webkit-transform: scale(1.2);
+				}
+				.t-course .t-c-img span {
+					position: absolute;
+					bottom: -19px;
+					width: 280px;
+					height: 24px;
+					color: #fff;
+					text-align: center;
+					background: #39b94e;
+					z-index: 1;
+					transition: 0.3s;
+					-moz-transition: 0.3s;
+					-webkit-transition: 0.3s;
+					-o-transition: 0.3s;
+				}
+				.t-course:hover span {
+					bottom: 0px;
+					*display: block;
+				}
+				.t-course h5 {
+					margin:0;
+					line-height: 50px;
+					text-align: center;
+					color: #363d40; 
+				}
+				.t-course .t-c-intro {
+					position: absolute;
+					top: 160px;
+					left: 0;
+					display: none\0/;
+					*display: none;
+					width: 252px;
+					padding: 0 14px;
+					opacity: 0;
+					background: #fff;
+					background: #f7faf9\0/;
+					*background: #f7faf9;
+					transition: 0.3s;
+					-moz-transition: 0.3s;
+					-webkit-transition: 0.3s;
+					-o-transition: 0.3s;
+				}
+				.t-course:hover .t-c-intro{
+					color: #656e73;
+					opacity: 1;
+					display: block\0/;
+					*display: block;
+				}
+				.t-course  .t-c-intro p {
+					height: 40px;
+					padding-top: 10px;
+					line-height: 20px;
+				}
+				.t-course  .t-c-intro span {
+					color: #b4bbbf;
+				}
+				.t-course  .t-c-tips {
+					padding: 0 14px;
+					color: #b4bbbf;
+				}	
+			</style>
+		</li>
+		<li>
+			<div class="t-pao">
+				<span class="t-paobg"></span>
+				<span class="t-paoit"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+			</div>
+			<style>
+				.t-pao{
+					position:relative;
+					height: 186px;
+					overflow: hidden;
+					background-color:#9ED868;
+				}
+				.t-paobg{
+					position:absolute;
+					width:100%;
+					height:186px;
+					background:url(../images/test/pao_bg.png) no-repeat center;
+					z-index:2;
+				}
+				.t-paoit i{
+					position: absolute;
+					top: 100%;
+					width: 53px;
+					height: 56px;
+					overflow: hidden;
+					background:url(../images/test/pao.png) no-repeat;
+					-webkit-animation: paoi 7s 2s infinite;/*无穷大*/
+					-moz-animation: paoi 7s 2s infinite;
+					-ms-animation: paoi 7s 2s infinite;
+					animation: paoi 7s 2s infinite;
+				}
+				.t-paoit i:nth-child(1) {
+					left:0;
+					-webkit-animation-delay: 2s;
+					-moz-animation-delay: 2s;
+					-ms-animation-delay: 2s;
+					animation-delay: 2s;
+				}
+				.t-paoit i:nth-child(2) {
+					left: 85px;
+					-webkit-animation-duration: 6s;
+					-moz-animation-duration: 6s;
+					-ms-animation-duration: 6s;
+					animation-duration: 6s;
+					-webkit-animation-delay: 5s;
+					-moz-animation-delay: 5s;
+					-ms-animation-delay: 5s;
+					animation-delay: 5s;
+					background-position: 0 -64px;
+				}
+				.t-paoit i:nth-child(3) {
+					left: 148px;
+					-webkit-animation-duration: 5s;
+					-moz-animation-duration: 5s;
+					-ms-animation-duration: 5s;
+					animation-duration: 5s;
+					-webkit-animation-delay: 6s;
+					-moz-animation-delay: 6s;
+					-ms-animation-delay: 6s;
+					animation-delay: 6s;
+				}
+				.t-paoit i:nth-child(4) {
+					left: 190px;
+					-webkit-animation-delay: 3s;
+					-moz-animation-delay: 3s;
+					-ms-animation-delay: 3s;
+					animation-delay: 3s;
+					background-position: 0 -140px;
+				}
+				.t-paoit i:nth-child(5) {
+					left: 285px;
+					-webkit-animation-duration: 5s;
+					-moz-animation-duration: 5s;
+					-ms-animation-duration: 5s;
+					animation-duration: 5s;
+					-webkit-animation-delay: 7s;
+					-moz-animation-delay: 7s;
+					-ms-animation-delay: 7s;
+					animation-delay: 7s;
+				}
+				.t-paoit i:nth-child(6) {
+					left: 350px;
+					background-position:0 -64px;
+				}
+				.t-paoit i:nth-child(7) {
+					left: 400px;
+					-webkit-animation-delay: 4s;
+					-moz-animation-delay: 4s;
+					-ms-animation-delay: 4s;
+					animation-delay: 4s;
+				}
+				@-webkit-keyframes paoi { 
+					0% {
+						top:186px;
+					}
+					100% {
+						top:-56px;
+					}
+				}
+			</style>
+		</li>
+	</ul>
 </div>
 <script src="../js/jquery.js"></script>
 <script src="../js/myscript.js"></script>
+<script src="../highlight/highlight.pack.js"></script>
 <script>
+ hljs.initHighlightingOnLoad('html','css');
 </script>
 </body>
 </html>

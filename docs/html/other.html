@@ -9,11 +9,12 @@
 <meta name="description" content=" 网站内容描述">
 <meta name="author" content="网站作者">
 <link rel="shortcut icon" href="images/favicon.ico">
-<title>标题</title>
+<title>其他</title>
 <link href="../css/public.css" rel="stylesheet">
 <link href="../css/common.css" rel="stylesheet">
 <link href="../css/page.css" rel="stylesheet">
 <link href="../css/form.css" rel="stylesheet">
+<link href="../highlight/styles/github.css" rel="stylesheet">
 </head>
 <body>
 <!--[if  IE 6]> 
@@ -30,12 +31,36 @@
 	})
 </script>
 <![endif]-->
-<div class="inner" style="height:1600px;">
+<nav class="topNav"></nav>
+<div class="wrapper-box inner" style="height:1600px;">
+	<h1 class="article-Title">其他</h1>
 	<h2>返回顶部</h2>
 	<a class="back-to-top" href="javascript:void(0)">返回顶部</a>
+	<h4>HTML:</h4>
+	<pre><code>&lt;a class=&quot;back-to-top&quot; href=&quot;javascript:void(0)&quot;&gt;返回顶部&lt;/a&gt;</code></pre>
+	<h4>CSS:</h4>
+	<pre><code>.back-to-top{
+	display:none;
+	position: fixed;
+	right:10px;
+	bottom: 20px;
+	width: 40px;
+	height:40px;
+	background:url(../images/top_bg.png) no-repeat;
+	line-height:100;
+	font-size:0;
+	overflow:hidden;
+}
+.back-to-top:hover{
+	background-position:left bottom;
+}</code></pre>
+<pre><code></code></pre>
 </div>
-<!----------------         弹出框 结束          ------------------->
 <script src="../js/jquery.js"></script>
 <script src="../js/myscript.js"></script>
+<script src="../highlight/highlight.pack.js"></script>
+<script>
+ hljs.initHighlightingOnLoad('html','css');
+</script>
 </body>
 </html>
