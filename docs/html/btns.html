@@ -17,7 +17,7 @@
 <link href="../css/page.css" rel="stylesheet">
 <link href="../css/btns.css" rel="stylesheet">
 <link href="../highlight/styles/github.css" rel="stylesheet">
-<script src="../js/jquery.js"></script>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
 <!--[if  IE 6]> 
@@ -66,7 +66,7 @@
 		background-image: linear-gradient(to top, #ff7200, #ffa904);
 	}
 </style>
-<nav class="topNav"></nav>
+<nav class="topNav"><!--页头--></nav>
 <div class="wrapper-box inner">
 	<h1 class="article-Title">按钮</h1>
 	<!--按钮 开始-->
@@ -130,6 +130,13 @@
 	background-image: -ms-linear-gradient(bottom, #ff7200, #ffa904);
 	background-image: linear-gradient(to top, #ff7200, #ffa904);
 }	</code></pre>
+	</div>
+	<div class="box">
+		<h2>上传按钮</h2>
+		<a class="btn btn-file" href="javascript:void(0)">
+			上传
+			<input type="file" value="上传">
+		</a>
 	</div>
 	<div class="box">
 		<h2>按压按钮效果</h2>
@@ -227,52 +234,9 @@
 	*star:expression(this.onFocus=this.blur()); /* for Ie7及以下*/ 
 }</code></pre>
 	</div>
-	<style>
-		.btn-group{
-			_padding-left:1px;
-			overflow:hidden;
-			*zoom:1	
-		}
-		.btn-group label{
-			float:left;
-			margin-left:-1px;
-		}
-		.btn-group .checked{
-			background-color:#f0f0f0;
-		}
-		.btn-group .btn:first-child {
-			margin-left: 0;
-		}
-		.btn-group>.btn:first-child:not(:last-child){
-			border-top-right-radius: 0;
-			border-bottom-right-radius: 0;
-		}
-		.btn-group>.btn:not(:first-child):not(:last-child){
-			border-radius: 0;
-		}	
-		.btn-group>.btn:last-child:not(:first-child){
-			border-top-left-radius: 0;
-			border-bottom-left-radius: 0;
-		}
-		.btn-group input{
-			position: absolute;
-			clip: rect(0,0,0,0);
-			clip: rect(0 0 0 0);
-			pointer-events: none;
-			*star:expression(this.onFocus=this.blur()); /* for Ie*/ 
-		}
-	</style>
 	<div class="box">
 		<h2>按钮loading</h2>
 		<a href="javascript:void(0)" id="btn-loadding" class="btn">按钮</a>
-		<style>
-			.btn-loadding{
-				color: transparent;
-				background:#f0f0f0 url(../images/loading_s.gif) no-repeat center;
-				cursor: default;
-    			pointer-events: none;
-			}
-		</style>
 		<script>
 			$(function(){
 				var $btnLd=$('#btn-loadding');
@@ -355,6 +319,7 @@
 		}
 		</style>
 	</div>
+	<footer class="footer"><!--页尾--></footer>
 </div>
 
 <script src="../js/myscript.js"></script>

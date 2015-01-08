@@ -1,0 +1,508 @@
+/*-- 横向菜单 --*/
+/*menu01*/
+.menu01{
+	background-color:#0084DB;
+}
+.menu01 li{
+	position:relative;
+	float:left;
+	margin-right:10px;	
+}
+.menu01 li a{
+	display:block;
+	line-height:40px;
+	padding:0 20px;
+	color:#fff;
+	text-decoration:none;
+	font-size:14px;
+}
+.menu01 a:hover,
+.menu01 .menu-sub,
+.menu01 .cur{
+	background: #40A3E4;
+}
+.menu01 .menu-sub{
+	display:none;
+	position:absolute;
+	width:100%;
+	z-index:9;
+}
+.menu01 .menu-sub li{
+	float:none;
+	margin:0;
+}
+.menu01 .menu-sub li a{
+	line-height:30px;
+}
+.menu01 .menu-sub a:hover,
+.menu01 ..menu-sub .menu-sub,
+.menu01 .menu-sub .cur{
+	background:#37C3E6;
+}
+.menu01 .menu-sub .menu-sub{
+	display:none;
+	position:absolute;
+	left:100%;
+	top:0;	
+}
+.menu01 .menu-sub .menu-sub a:hover{
+	background:#0CF;
+}
+/*menu02*/
+.menu02{
+	position:relative;
+}
+.menu02 li {
+	float: left;
+	width:88px;
+	margin-right:1px;
+	background:#eee;	
+	z-index: 99;
+}
+.menu02 li a {
+	position: relative;
+	display: block;
+	height:40px;
+	text-align: center;
+	text-decoration: none;
+	color: #888D91;
+	font-size: 14px;
+	font-weight:bold;
+	overflow:hidden;
+}
+.menu02 li span{
+	position: absolute;
+	left: 0;
+	width: 90px;
+	height:40px;
+	line-height:40px;
+}
+.menu02 .over {
+	background: #888282;
+	color: #FFF;
+	top:-40px;
+}
+.menu02 .menu-sub {
+	display:none;
+	position:absolute;
+	left:0;
+	color:#413c3c;
+	line-height:30px;
+}
+.menu02 .menu-sub a{
+	display:inline;
+	padding:0 10px;
+	height:30px;
+	line-height:30px;
+	font-weight:normal;
+	font-size:12px;
+	color:#413c3c;	
+}
+.menu02 .menu-sub a:hover{
+	color:#b8001e;
+}
+/*menu03*/
+.menu03{
+	height:36px;
+	line-height:36px;
+	background:#F29000 url(../images/menu/menu03-bg.png) repeat-x;
+}
+.menu03 li {
+	position: relative;
+	float: left;
+	width:76px;
+	background:url(../images/menu/menu03-line.png) no-repeat left center;
+	z-index: 99;
+}
+.menu03 a {
+	display: block;
+	margin-left:1px;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+.menu03 a:hover{
+	background: #ED6505;
+}
+.menu03 .menu-sub-links{
+	display:none;
+}
+.menu03-subMenu{
+	display:none;
+	position:relative;
+	height: 26px;
+	line-height:26px;
+	border: 1px solid #E8C797;
+	border-top:none;
+	background-color: #FEE7A9;
+	color: #A63B23;
+}
+.menu03-subMenu .subMenuItem a{
+	padding:0 10px;
+	color: #A63B23;
+}
+.menu03-subMenu #curTime{
+	position:absolute;
+	right:10px;
+	top:0;
+}
+/*menu04*/
+.menu04{
+	position: relative;
+	height: 36px;
+	line-height: 36px;
+	border-top: 1px solid #194C7E;
+	background-color: #122D68;
+	z-index: 99;
+}
+.menu04 li {
+	position: relative;
+	float: left;
+	width: 100px;
+	background: url(../images/menu/menu04-line.png) left center no-repeat;
+}
+.menu04 .first { background: none; }
+.menu04 li a {
+	display: block;
+	font-size: 14px;
+	margin: 0 10px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+}
+.menu04 .cur a { background: #E4540E; }
+/*二级菜单*/
+.menu04 .menu-sub{
+	display: none;
+	position: absolute;
+	width: 400px;
+	left: 10px;
+	padding: 6px 0 6px 10px;
+	overflow: hidden;
+	background: #E4540E;
+	border-top: 1px solid #fff;
+	z-index: 999;
+}
+.menu04 .cur .menu-sub { display: block; }
+.menu04 .left {
+	left: auto;
+	right: 10px;
+}
+.menu04 .menu-sub a {
+	display: block;
+	float: left;
+	width:128px;
+	padding-left:4px;
+	font-size: 12px;
+	text-align: left;
+	line-height: 24px;
+	margin: 0;
+	font-weight: normal;
+}
+.menu04 .cur .menu-sub a:hover { color: #792D0C; }
+/*menu05*/
+.menu05{
+	position:relative;
+	background-color:#3399FF;	
+}
+.menu05 li{
+	position:relative;
+	float:left;
+	width:100px;
+	height:40px;	
+	text-align:center;
+	z-index:10;
+}
+.menu05 a{
+	display:block;
+	line-height:40px;
+	font-size:14px;
+	text-decoration:none;
+	color:#fff;
+	z-index:9;
+}
+.menu05 .cur a{
+	color:#fff;	
+}
+.menu05 .bg{
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:#0084E1;
+	z-index:9;
+}
+/*menu06*/
+.menu06 {
+	height: 36px;
+	border: 1px solid #CECECE;
+	background-color:#EFEFEF;
+}
+.menu06 li {
+	position: relative;
+	float: left;
+	padding: 0 10px;
+	z-index: 99;
+}
+.menu06 li a {
+	display: block;
+	width: 120px;
+	text-align: center;
+	text-decoration: none;
+	color: #242d24;
+	font: bold 14px/36px 'Microsoft Yahei';
+}
+.menu06 .active a, .menu06 .cur a {
+	padding-top: 6px;
+	margin-top: -6px;
+ 	*margin-top:0;
+	background:#FF9802;
+}
+/*menu07*/
+.menu07 {	
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+	background:#92070F;
+		z-index: 99;
+}
+.menu07 li {
+	float: left;
+	width: 90px;
+	margin-right: 32px;
+
+}
+.menu07 li a {
+	display: block;
+	font-size: 14px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+}
+.menu07 .cur a {
+	background: url(../images/menu/menu07-cur.png) center bottom no-repeat;
+}
+/*二级菜单*/
+.menu07 .menu-sub{
+	display:none;
+	position:absolute;
+	width:820px;
+	height:239px;
+	padding-left:36px;
+	padding-top:10px;
+	left:30px;
+	background:url(../images/menu/menu07-sub-bg.jpg) no-repeat;
+	overflow:hidden;
+	z-index:999;
+}
+.menu07 .menu-sub a{
+	background:none;
+}
+.menu07 .menu-sub dl{
+	float:left;
+	width:120px;	
+	margin:0;
+	margin-right:10px;	
+}
+.menu07 .menu-sub dt{
+	float:none;
+	padding-left:14px;
+	line-height:30px;
+	background:url(../images/menu/menu07-sub-dot.png) left center no-repeat;
+}
+.menu07 .menu-sub dd{
+	line-height:20px;
+	margin-left:16px;
+}
+.menu07 .menu-sub dl a{
+	color:#333;
+	text-align:left;
+	font-weight:normal;
+	letter-spacing:2px;
+}
+.menu07 .menu-sub dl a:hover{
+	color:#92070F;
+}
+.menu07 .menu-sub dd a{
+	display:inline-block;
+	line-height:20px;
+	font-size:12px;
+	margin:0;
+	margin-right:8px;
+	white-space:nowrap;
+	letter-spacing:1px;
+}
+/*menu08*/
+.menu08{
+	padding-left:40px;
+	border-bottom:6px solid #FF6600;
+}
+.menu08 li{
+	float:left;	
+}
+.menu08 li a{
+	display: block;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	width: 80px;
+	background: #EFEFEF;
+	margin-left: 1px;
+}
+.menu08 li a:hover{
+	background-color:#FF6600;
+	color:#fff;
+	text-decoration:none;
+}
+.menu08 .active a{
+	background-color:#FF6600;
+	color:#fff;
+}
+/*-- 侧导航菜单 --*/
+.sideNavs .box{
+	float:left;
+	width:200px;
+	margin-right:20px;
+}
+/*sideNav01*/
+.sideNav01 li {
+	background: url(../images/menu/sideNav01-line.png) center 39px no-repeat;
+}
+.sideNav01 li a {
+	display: block;
+	height:40px;
+	line-height:40px;
+	padding-left: 64px;
+	font-size: 14px;
+	font-weight: bold;
+	background: url(../images/menu/sideNav01-icon.png) no-repeat;
+	background-position: 44px -31px;
+}
+.sideNav01 li a:hover,
+.sideNav01 .cur a {
+	color: #E4540E;
+	background-position: 44px 15px;
+	text-decoration: none;
+}
+/*边二级菜单*/
+.sideNav01 .sideNav-sub {
+	display: none;
+	margin-left:64px;
+}
+.sideNav01 .sideNav-sub a {
+	display:block;
+	height:30px;
+	line-height:30px;
+	font-size: 12px;
+	padding-left: 12px;
+	color: #333;
+	font-size: 14px;
+	font-weight: normal;
+	background: url(../images/menu/sideNav01-dot.png) no-repeat left center;
+}
+.sideNav01 .sideNav-sub a:hover {
+	background: url(../images/menu/sideNav01-dot-cur.png) no-repeat left center;
+	color:#E4540E;
+}
+/*sideNav02*/
+.sideNav02 a {
+	display: block;
+	height: 30px;
+	border: 1px solid #ddd;
+	line-height: 30px;
+	background: url(../images/menu/sideNav02-bg.png) no-repeat;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+	text-indent: 4em;
+}
+.sideNav02 a:hover,
+.sideNav02 .cur a {
+	border-color: #E8700F;
+	background-position: left bottom;
+	text-decoration:none;
+	color: #fff;
+}
+/*边二级菜单*/
+.sideNav02 .sideNav-sub { display: none; }
+.sideNav02 .sideNav-sub a {
+	border:none;
+	color: #333;
+	font-size: 14px;
+	font-weight: normal;
+	background: url(../images/menu/sideNav02-dot.png) no-repeat 46px center;
+}
+.sideNav02 .sideNav-sub a:hover {
+	text-decoration: underline;
+	background: url(../images/menu/sideNav02-dot-cur.png) no-repeat 46px center;
+	color: #ff7800;
+}
+/*sideNav03*/
+.sideNav03 {
+	position:relative;
+	background:#F1A986;
+}
+.sideNav03 li{
+	position:relative;
+	z-index:1;
+}
+.sideNav03 li a {
+	display: block;
+	line-height:38px;
+	padding-left: 50px;
+	font-size:16px;
+	color: #fff;
+}
+.sideNav03 li a:hover { text-decoration: none; }
+.sideNav03 .bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 38px;
+	background: #E4540E;
+	z-index:0;
+}
+/*sideNav04*/
+.sideNav04 li {
+	background: url(../images/menu/sideNav04-line.png) center 34px no-repeat;
+}
+.sideNav04 li a {
+	display: block;
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 40px;
+	background: url(../images/menu/sideNav04-icon.png) no-repeat;
+	background-position: 14px -33px;
+}
+.sideNav04 li a:hover,
+.sideNav04 .cur a {
+	color: #93080F;
+	background-position: 14px 13px;
+	text-decoration: none;
+}
+/*边二级菜单*/
+.sideNav04 .sideNav-sub {
+	margin-left: 30px;
+}
+.sideNav04 .sideNav-sub a {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	width: 50px;
+	font-size: 12px;
+	padding-left: 10px;
+	color: #333;
+	font-size: 14px;
+	font-weight: normal;
+	background: url(../images/menu/sideNav04-dot.png) no-repeat left center;
+}
+.sideNav04 .sideNav-sub a:hover {
+	color: #93080F;
+	font-weight: bold;
+	background: url(../images/menu/sideNav04-dot-cur.png) no-repeat left center;
+}

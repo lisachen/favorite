@@ -1,18 +1,17 @@
 /**
 表单控件
 *input默认大小274*32
-*label字体大小14px,颜色#666
+*label字体大小14px,颜色#666,行高32px
 *提示颜色#999
 *模拟单选复选框大小16*16
 **/
-input:focus { border:1px solid #5DC2FE; }
 /*-- 表单 --*/
-.form-group {
-	margin-bottom: 20px;
+.form-group { margin-bottom: 20px; }
+.form-label {
 	font-size: 14px;
 	color: #666;
+	line-height: 32px;
 }
-.form-label { line-height: 32px; }
 .form-input {
 	width: 274px;
 	height: 14px;
@@ -83,7 +82,7 @@ input:focus { border:1px solid #5DC2FE; }
 }
 .form-horizontal .btn { margin-left: 64px; }
 /*== 文字在输入框上 ==*/
-.form-placeholder .form-group { position: relative; }
+.form-placeholder .form-group, .form-placeholder { position: relative; }
 .form-placeholder .form-label {
 	position: absolute;
 	top: 0;
@@ -122,9 +121,7 @@ input:focus { border:1px solid #5DC2FE; }
 }
 .dropdown a:hover { text-decoration: none; }
 .dropdown-input {
-	padding: 0 30px 0 6px;
-	height: 30px;
-	line-height: 30px;
+	padding: 8px 30px 8px 6px;
 	font-size: 16px;
 	color: #999;
 	border: none;
@@ -158,9 +155,7 @@ input:focus { border:1px solid #5DC2FE; }
 }
 .dropdown-menu li:hover { background-color: #F9F9F9; }
 /*单选框-复选框*/
-.radio, .checkbox { 
-	display:inline;
-}
+.radio, .checkbox { display: inline; }
 .radio input, .checkbox input { visibility: hidden; }
 .radio-btn, .checkbox-btn {
 	display: inline-block;
@@ -186,3 +181,82 @@ input:focus { border:1px solid #5DC2FE; }
 	word-wrap: break-word;
 }
 .warning em { color: red; }
+/*搜索框*/
+.form-search { margin-bottom: 20px; }
+.form-search01 .form-input { border-right: none; }
+.form-search01 .btn {
+	line-height: 18px;
+	border-left: none;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.form-search02 {
+	width: 262px;
+	border: 1px solid #E6E8E9;
+	box-shadow: 0px 1px 2px #D5D7D8;
+	background-color: #FFF;
+	overflow: hidden;
+}
+.form-search02.focus { border-color: #2EA7E0; }
+.search-input {
+	float: left;
+	width: 200px;
+	line-height: 18px;
+	padding: 10px;
+	margin: 0;
+	border: none;
+}
+.search-btn {
+	float: right;
+	width: 38px;
+	height: 38px;
+	background: url(../images/search-btn.png) no-repeat;
+	text-indent: -9999em;
+	overflow: hidden;
+}
+.focus .search-btn { background-position: 0 -38px; }
+.search-result {
+	display: none;
+	position: absolute;
+	width: 260px;
+	margin: 39px 0 0 -1px;
+	border: 1px solid #E6E8E9;
+	background-color: #FFF;
+	box-shadow: 0px 1px 2px #D5D7D8;
+	z-index: 9;
+}
+.search-result li {
+	line-height: 30px;
+	padding-left: 12px;
+	font-size: 12px;
+}
+.search-result li:hover { background-color: #F9F9F9; }
+.search-result a {
+	display: block;
+	color: #5e5e5e;
+	text-decoration: none;
+}
+.search-result a:hover { color: #000; }
+/*进度条*/
+.progress {
+	height: 20px;
+	overflow: hidden;
+	background-color: #F5F5F5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.progress-bar {
+	float: left;
+	width: 0;
+	height: 100%;
+	color: #FFF;
+	background-color: #0895DA;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	-webkit-transition: width .6s ease;
+	-o-transition: width .6s ease;
+	transition: width .6s ease;
+}

@@ -1,132 +1,138 @@
-.inner{
-	width:900px;
-	margin:0 auto;
+.fn-w300 { width: 300px; }
+.fn-w400 { width: 400px; }
+.fn-w230 { width: 230px; }
+.fn-mr10 { margin-right: 10px; }
+code{
+	font-size:12px;
+	max-height:200px;
+	overflow-y:auto;
 }
-
+.inner {
+	width: 70%;
+	min-width:1000px;
+	margin: 0 auto;
+}
+.navs { 
+	width:72%; 
+	min-width:1020px;
+}
 /*顶部菜单*/
-.topNav{
-	position:fixed;
-	top:0;
-	right:0;
-	width:100%;
-	height:30px;
-	background:#2A303E;
-	z-index:999;
+.topNav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 30px;
+	background: #2A303E;
+	z-index: 999;
 }
-.navs{
-	width:942px;
+.modal-open .navs { padding-right: 17px; }
+.navs li { float: left; }
+.navs li a {
+	display: inline-block;
+	margin-right: 20px;
+	padding: 0 4px;
+	color: #D9DADB;
+	font: 14px/28px 'Microsoft Yahei';
 }
-.navs li{
-	float:left;
+.navs li a:hover {
+	text-decoration: none;
+	background-color: #212530;
+	border-bottom: 4px solid #D43F41;
 }
-.navs li a{
-	display:inline-block;
-	margin-right:20px;
-	padding:0 4px;
-	color:#D9DADB;
-	font:14px/28px 'Microsoft Yahei';	
+.navs .logo, .navs .logo:hover {
+	width: 120px;
+	background-color: #D43F41;
+	text-align: center;
+	color: #fff;
 }
-.navs li a:hover{
-	text-decoration:none;
-	background-color:#212530;
-	border-bottom:4px solid #D43F41;
-}
-.navs .logo,.navs .logo:hover{
-	width:120px;
-	background-color:#D43F41;	
-	text-align:center;
-	color: #fff;	
-}
-.navs .logo strong{
-	display:block;
-	font:18px/30px Arial;
+.navs .logo strong {
+	display: block;
+	font: 18px/30px Arial;
 	text-shadow: 1px 1px 1px rgba(0,0,0,.24);
 }
-.wrapper-box{
-	border:1px solid #eee; 
-	padding:40px 20px;	
+.wrapper-box {
+	border: 1px solid #eee;
+	padding: 40px 1% 10px 1%;
 }
-.box{
-	margin-bottom:20px;
+.box { margin-bottom: 20px; }
+.links {
+	position: fixed;
+	top: 30%;
+	left: 20px;
+	width: 120px;
+	text-align: center;
 }
-.links{
-	position:fixed;
-	top:30%;
-	left:20px;
-	width:120px;
-	text-align:center;
+.links a {
+	display: block;
+	padding: 5px;
+	line-height: 30px;
+	border: 1px solid #eee;
 }
-.links a{
-	display:block;
-	padding:5px;
-	line-height:30px;
-	border:1px solid #eee;
+.links a:hover { background-color: #fefefe; }
+h1 {
+	font-size: 30px;
+	margin-bottom: 10px;
+	color: #212530;
 }
-.links a:hover{
-	background-color:#fefefe;
+h2 {
+	font-size: 20px;
+	line-height: 2.4;
+	color: #D43F41;
 }
-form{
-	margin-left:40px;
+h3 {
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 2.6;
+	color: #D43F41;
 }
-h1{
-	font-size:30px;
-	margin-bottom:10px;
-	color:#212530;
+hr {
+	margin: 20px 0;
+	border: 1px dashed #eee;
 }
-h2{
-	font-size:20px;
-	line-height:2;
-	color:#D43F41;
+.article-Title {
+	font: 30px/2.4 'Microsoft Yahei';
+	text-align: center;
 }
-h3{
-	font-size:14px;
-	font-weight:normal;
-	line-height:2;
-	color:#D43F41;
+.example-modal {
+	position: static;
+	display: block;
+	width: 560px;
+	margin: 10px 0;
+	z-index: 1;
 }
-hr{
-	margin:20px 0;
-	border:1px dashed #eee;
-}
-.article-Title{
-	font:30px/2.4 'Microsoft Yahei';
-	text-align:center;
-}
-.example-modal{
-	position:static;
-	display:block;
-	width:560px;
-	margin:10px 0;
-	z-index:1;
-}
-.example-modal .modal-content{
-	z-index:2;
-}
-.explain{
+.example-modal .modal-content { z-index: 2; }
+.explain {
 	padding: 20px;
 	margin: 20px 0;
 	border: 1px solid #FAEBCC;
-	background-color:#FCF8E3;
+	background-color: #FCF8E3;
 }
-/*tab切换*/
-.tab{
-	width:500px;
-	margin-bottom:10px;
+.tab {
+	width: 500px;
+	margin-bottom: 10px;
 }
-.tab-nav li {
-	border:1px solid #eee;
-	border-bottom:none;
-	margin-right:8px;
-	padding:0 20px;
-	line-height:30px;
-	font-size:14px;
+.footer {
+	font-size: 12px;
+	text-align: center;
+	color: #999;
 }
-.tab-nav .cur{
-	background-color:#FAFAFA;
+.content-fixed { text-align: right; }
+.fixed-icons {
+	display: inline;
+	position: fixed;
+	bottom: 20px;
+	margin-left: 30px;
 }
-.tab .bd{
-	margin-top: -1px;
-	border:1px solid #eee;
-	background-color:#FAFAFA;
-	height:100px;
+.icon-top, .icon-feedback, .icon-app {
+	display: block;
+	width: 48px;
+	height: 48px;
+	margin-top: 6px;
+	background: url(../images/fixed-icon.png) no-repeat;
 }
+.icon-top:hover { background-position: 0 -50px; }
+.icon-feedback { background-position: -48px 0; }
+.icon-feedback:hover { background-position: -48px -50px; }
+.icon-app { background-position: -96px 0; }
+.icon-app:hover { background-position: -96px -50px; }

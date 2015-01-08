@@ -31,15 +31,16 @@
 	})
 </script>
 <![endif]-->
-<nav class="topNav"></nav>
-<div class="wrapper-box inner" style="height:1600px;">
+<nav class="topNav"><!--页头--></nav>
+<div class="wrapper-box inner">
 	<h1 class="article-Title">其他</h1>
-	<h2>返回顶部</h2>
-	<a class="back-to-top" href="javascript:void(0)">返回顶部</a>
-	<h4>HTML:</h4>
-	<pre><code>&lt;a class=&quot;back-to-top&quot; href=&quot;javascript:void(0)&quot;&gt;返回顶部&lt;/a&gt;</code></pre>
-	<h4>CSS:</h4>
-	<pre><code>.back-to-top{
+	<div class="box">
+		<h2>返回顶部</h2>
+		<a class="back-to-top" href="javascript:void(0)">返回顶部</a>
+		<h4>HTML:</h4>
+		<pre><code>&lt;a class=&quot;back-to-top&quot; href=&quot;javascript:void(0)&quot;&gt;返回顶部&lt;/a&gt;</code></pre>
+		<h4>CSS:</h4>
+		<pre><code>.back-to-top{
 	display:none;
 	position: fixed;
 	right:10px;
@@ -55,8 +56,88 @@
 	background-position:left bottom;
 }</code></pre>
 <pre><code></code></pre>
+	</div>
+	<div class="box">
+		<h2>标记<small>badge</small></h2>
+		<span class="badge">1</span>
+	</div>
+	<div class="box">
+		
+	</div>
+	<div class="box">
+		<h2>列表组</h2>
+		<ul class="list-group">
+			<li class="list-group-item">列表1</li>
+			<li class="list-group-item">列表1</li>
+			<li class="list-group-item">列表1</li>
+		</ul>
+	</div>
+	<div class="box">
+		<h2>面板</h2>
+		<div class="panel">
+			<div class="panel-hd">
+				<h3 class="panel-title">标题</h3>
+				<a class="panel-more" href="javascript:void(0)">更多&gt;&gt;</a>
+			</div>
+			<div class="panel-bd">
+				内容
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<h2>分页</h2>
+		<div class="pageNav fn-tl">
+			<a class="first">首页</a><a class="prev">上一页</a><a class="cur">1</a><a href="javascript:void(0)">2</a><a href="javascript:void(0)">3</a><a href="javascript:void(0)">4</a><a href="javascript:void(0)">5</a><span class="mor">...</span><a href="javascript:void(0)">62</a><a class="next" href="javascript:void(0)">下一页</a><a class="last">尾页</a><input type="text">页<a class="btn btn-xs">跳转</a>
+		</div>
+	</div>
+	<div class="box">
+		<h2>表格</h2>
+		<table class="table fn-w400">
+		  <caption class="fn-sr-only">表格名称</caption>
+		  <thead>
+			<tr>
+			  <th>序号</th>
+			  <th>姓名</th>
+			  <th>班级</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td>1</td>
+			  <td>啥啥啥</td>
+			  <td>一年级</td>
+			</tr>
+				<tr>
+			  <td>2</td>
+			  <td>督导室</td>
+			  <td>一年级</td>
+			</tr>
+				<tr>
+			  <td>3</td>
+			  <td>粉色的</td>
+			  <td>三年级</td>
+			</tr>
+		  </tbody>
+		</table>
+		<pre><code>&lt;table class=&quot;table&quot;&gt;
+  &lt;caption class=&quot;fn-sr-only&quot;&gt;表格名称&lt;/caption&gt;
+  &lt;thead&gt;
+	&lt;tr&gt;
+	  &lt;th&gt;...&lt;/th&gt;
+	  &lt;th&gt;...&lt;/th&gt;
+	&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+	&lt;tr&gt;
+	  &lt;td&gt;...&lt;/td&gt;
+	  &lt;td&gt;...&lt;/td&gt;
+	&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+	</div>
+	<footer class="footer"><!--页尾--></footer>
 </div>
-<script src="../js/jquery.js"></script>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="../js/myscript.js"></script>
 <script src="../highlight/highlight.pack.js"></script>
 <script>

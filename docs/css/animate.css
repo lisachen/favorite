@@ -1,8 +1,4 @@
-li:hover .rotate{
-	-webkit-animation: rotatein 1s ease-in-out;
-}
-
-
+li:hover .rotate { -webkit-animation: rotatein 1s ease-in-out; }
 li:hover .fadeIn {
 	-webkit-animation: easeIn 1s ease;
 	-moz-animation: easeIn 1s ease;
@@ -63,7 +59,7 @@ li:hover .rScale {
 	-o-animation-fill-mode: backwards;
 	animation-fill-mode: backwards
 }
-li:hover .oScale{
+li:hover .oScale {
 	-webkit-animation: scale_o 1s ease;
 	-moz-animation: scale_o 1s ease;
 	-o-animation: scale_o 1s ease;
@@ -73,28 +69,27 @@ li:hover .oScale{
 	-o-animation-fill-mode: backwards;
 	animation-fill-mode: backwards;
 }
-li:hover .bounceInDown{
+li:hover .bounceInDown {
 	-webkit-animation: bounceInDown 1s .2s ease both;
 	-moz-animation: bounceInDown 1.5s .2s ease both;
 	-ms-animation: bounceInDown 1s .2s ease both;
 	-o-animation: bounceInDown 1s .2s ease both;
-		-webkit-animation-fill-mode: backwards;
+	-webkit-animation-fill-mode: backwards;
 	-moz-animation-fill-mode: backwards;
 	-o-animation-fill-mode: backwards;
 	animation-fill-mode: backwards;
 }
-li:hover .width_l{
+li:hover .width_l {
 	-webkit-animation: width_l 1s ease;
 	-moz-animation: width_l 1s ease;
 	-ms-animation: width_l 1s ease;
 	-o-animation: width_l 1s ease;
-		-webkit-animation-fill-mode: backwards;
+	-webkit-animation-fill-mode: backwards;
 	-moz-animation-fill-mode: backwards;
 	-o-animation-fill-mode: backwards;
 	animation-fill-mode: backwards;
 }
-
-@-webkit-keyframes easeIn { 0% {
+ @-webkit-keyframes easeIn { 0% {
 opacity:0
 }
 100% {
@@ -447,37 +442,161 @@ transform:translateX(0px);
 opacity:1
 }
 }
-@-webkit-keyframes rotatein {
-	  0% { -webkit-transform: rotate(0);
-	  	-webkit-transform-origin: 50% 50%;
-	-moz-transform-origin: 50% 50%;
-	-o-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
-	   }
-	100% { -webkit-transform: rotate(360deg); }
+@-webkit-keyframes rotatein {  0% {
+-webkit-transform: rotate(0);
+ -webkit-transform-origin: 50% 50%;
+ -moz-transform-origin: 50% 50%;
+ -o-transform-origin: 50% 50%;
+ transform-origin: 50% 50%;
 }
-@-webkit-keyframes scale_o { 
-	0% {
-		opacity:0;
-		-webkit-transform-origin:50% 50%;
-		-webkit-transform:scale(0)
-	}
-	100% {
-		opacity:1;
-		-webkit-transform:scale(1)
-	}
+ 100% {
+-webkit-transform: rotate(360deg);
 }
-@-webkit-keyframes bounceInDown{
-	0%{opacity:0;-webkit-transform:translateY(-2000px)}
-	60%{opacity:1; -webkit-transform:translateY(30px)}
-	80%{-webkit-transform:translateY(-10px)}
-	100%{-webkit-transform:translateY(0)}
 }
-@-webkit-keyframes width_l { 
-	0% {
-		width:0;
-	}
-	100% {
-		width:100%
-	}
+@-webkit-keyframes scale_o {  0% {
+ opacity:0;
+ -webkit-transform-origin:50% 50%;
+ -webkit-transform:scale(0)
 }
+ 100% {
+ opacity:1;
+ -webkit-transform:scale(1)
+}
+}
+@-webkit-keyframes bounceInDown {  0% {
+opacity:0;
+-webkit-transform:translateY(-2000px)
+}
+ 60% {
+opacity:1;
+-webkit-transform:translateY(30px)
+}
+ 80% {
+-webkit-transform:translateY(-10px)
+}
+ 100% {
+-webkit-transform:translateY(0)
+}
+}
+@-webkit-keyframes width_l {  0% {
+ width:0;
+}
+ 100% {
+ width:100%
+}
+}
+/*--大海--*/
+.sea{
+	position: relative;	
+	height: 250px;
+	background: #4CC1E9;
+	overflow: hidden;
+}
+.wave{
+	position: absolute;
+	left:-50px;
+	right:-50px;
+}
+.wave01{
+	bottom:25px;
+	height:33px;
+	background:url(../images/test/water-1.png) repeat-x;
+	-webkit-animation: wave 7s 0.1s infinite linear;	
+}
+.wave02{
+	bottom:10px;
+	height:39px;
+	background:url(../images/test/water-2.png) repeat-x;
+	-webkit-animation: wave 6.5s 0.1s infinite linear;	
+}
+.boat{	
+	position:absolute;
+	right:10%;
+	bottom: 18px;
+	width: 119px;
+	height: 57px;
+	background:url(../images/test/boat.png) no-repeat;
+	-webkit-animation: wave 6s 0.1s infinite linear;
+}
+.cloud{
+	position:absolute;
+}
+.cloud01{
+	top: 5px;
+	left:12%;
+	width:300px;
+	height:48px;
+	background:url(../images/test/cloud-1.png) no-repeat;
+	-webkit-animation: cloud 9.5s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);/*alternate(逆向)；cubic-bezier（速度）*/
+}
+.cloud02{
+	top: 25px;
+	right:18%;
+	width:360px;
+	height:28px;
+	background:url(../images/test/cloud-2.png) no-repeat right;
+	-webkit-animation: cloud 15.5s .6s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.wave03{
+	bottom:-10px;
+	height:45px;
+	background:url(../images/test/water-3.png) repeat-x;
+	-webkit-animation: wave 6s 0.1s infinite linear;	
+}
+.wave04{
+	bottom:-50px;
+	height:78px;
+	background:url(../images/test/water-4.png) repeat-x;
+	-webkit-animation: wave 5s 0.1s infinite linear;	
+}
+@-webkit-keyframes wave {
+0% {
+	-webkit-transform:rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+}
+100% {
+	-webkit-transform:rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+}
+}
+@-moz-keyframes wave {
+0% {
+	-moz-transform:rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+}
+100% {
+	-moz-transform:rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+}
+}
+@-o-keyframes wave {
+0% {
+	-o-transform:rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+}
+100% {
+	-o-transform:rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+}
+}
+@-webkit-keyframes cloud {
+0% {
+	-webkit-transform:rotateZ(30deg) translate3d(0, 0, 0) rotateZ(-30deg);
+}
+50% {
+	-webkit-transform:rotateZ(-60deg) translate3d(10%, 25%, 0) rotateZ(60deg);
+}
+}
+@-moz-keyframes cloud {
+0% {
+	-moz-transform:rotateZ(30deg) translate3d(0, 0, 0) rotateZ(-30deg);
+}
+50% {
+	-moz-transform:rotateZ(-60deg) translate3d(10%, 25%, 0) rotateZ(60deg);
+}
+}
+@-o-keyframes cloud {
+0% {
+	-o-transform:rotateZ(30deg) translate3d(0, 0, 0) rotateZ(-30deg);
+}
+50% {
+	-o-transform:rotateZ(-60deg) translate3d(10%, 25%, 0) rotateZ(60deg);
+}
+}
+
+
+

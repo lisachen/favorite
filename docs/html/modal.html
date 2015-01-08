@@ -31,7 +31,7 @@
 	})
 </script>
 <![endif]-->
-<nav class="topNav"></nav>
+<nav class="topNav"><!--页头--></nav>
 <div class="wrapper-box inner">
 	<h1 class="article-Title">弹出层的实现方法</h1>
 	<div class="links">
@@ -43,14 +43,14 @@
 		<h3>静态实例</h3>
 		<div class="modal example-modal" id="" data-launch="false">
 			<div class="modal-content">
-				<div class="hd">
+				<div class="modal-hd">
 					<h2 class="modal-title">设置</h2>
 					<button type="button" class="modal-close" data-dismiss="modal">&times;</button>
 				</div>
-				<div class="bd">
+				<div class="modal-bd">
 					<p class="msg-text">家长您好！开学以来，孩子表现不错，课堂上认真听讲，请您及时表扬孩子。如果孩子能积极发言那就更好了，你可以引导孩子大声朗读经典文章，提高孩子语言表达能力，鼓励他大胆发言，锻炼孩子在众人面前发表自己言论的胆量，培养他的自信。相信孩子会有更大的进步的！</p>
 				</div>
-				<div class="ft">
+				<div class="modal-ft">
 					<a class="btn btn-primary" href="javascript:void(0);">确定</a>
 					<a class="btn btn-default" data-dismiss="modal" href="javascript:void(0);">取消</a>
 				</div>
@@ -59,14 +59,14 @@
 		<h4>HTML:</h4>
 		<pre><code>&lt;div class=&quot;modal&quot; data-launch=&quot;false&quot;&gt;
 	&lt;div class=&quot;modal-content&quot;&gt;
-		&lt;div class=&quot;hd&quot;&gt;
+		&lt;div class=&quot;modal-hd&quot;&gt;
 			&lt;h2 class=&quot;modal-title&quot;&gt;设置&lt;/h2&gt;
 			&lt;button type=&quot;button&quot; class=&quot;modal-close&quot; data-dismiss=&quot;modal&quot;&gt;&times;&lt;/button&gt;
 		&lt;/div&gt;
-		&lt;div class=&quot;bd&quot;&gt;
+		&lt;div class=&quot;modal-bd&quot;&gt;
 			&lt;p class=&quot;msg-text&quot;&gt;家长您好！开学以来，孩子表现不错，课堂上认真听讲，请您及时表扬孩子。如果孩子能积极发言那就更好了，你可以引导孩子大声朗读经典文章，提高孩子语言表达能力，鼓励他大胆发言，锻炼孩子在众人面前发表自己言论的胆量，培养他的自信。相信孩子会有更大的进步的！&lt;/p&gt;
 		&lt;/div&gt;
-		&lt;div class=&quot;ft&quot;&gt;
+		&lt;div class=&quot;modal-ft&quot;&gt;
 			&lt;a class=&quot;btn btn-primary&quot; href=&quot;javascript:void(0);&quot;&gt;确定&lt;/a&gt;
 			&lt;a class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot; href=&quot;javascript:void(0);&quot;&gt;取消&lt;/a&gt;
 		&lt;/div&gt;
@@ -95,24 +95,24 @@
 .modal .modal-close:hover{
 	color:#ddd;
 }
-.modal .hd {
+.modal .modal-hd {
 	height: 46px;
 	padding: 0 10px;
 	background-color: #0895DA;
 	overflow: hidden;
 }
 .modal .modal-title {
-	font: 16px/46px 'Microsoft Yahei';
+	font: 16px/46px 'Microsomodal-ft Yahei';
 	color: #fff;
 }
-.modal .bd { padding: 4px 10px; }
-.modal .ft {
+.modal .modal-bd { padding: 4px 10px; }
+.modal .modal-ft {
 	margin: 10px 10px 0 10px;
 	text-align: center;
 	border-top: 1px solid #d4dce3;
 	padding: 10px;
 }
-.modal .ft a { margin: 0 2px; }
+.modal .modal-ft a { margin: 0 2px; }
 </code></pre>
 		<h3>动态实例</h3>
 		<a class="btn btn-default" data-toggle="modal" data-target="#modal01">弹出"普通弹出框"</a>
@@ -188,24 +188,24 @@ function modalCenter(){
 		<h3>静态实例</h3>
 		<div class="modal modal-complex example-modal" id="" data-launch="false">
 			<div class="modal-content">
-				<div class="hd-l">
-					<div class="hd-r">
-						<div class="hd">
+				<div class="modal-hd-l">
+					<div class="modal-hd-r">
+						<div class="modal-hd">
 							<h2 class="modal-title">设置</h2>
 							<button type="button" class="modal-close" data-dismiss="modal">&times;</button>
 						</div>
 					</div>		
 				</div>
-				<div class="bd-l">
-					<div class="bd-r">
-						<div class="bd">
+				<div class="modal-bd-l">
+					<div class="modal-bd-r">
+						<div class="modal-bd">
 							<p class="msg-text">家长您好！开学以来，孩子表现不错，课堂上认真听讲，请您及时表扬孩子。如果孩子能积极发言那就更好了，你可以引导孩子大声朗读经典文章，提高孩子语言表达能力，鼓励他大胆发言，锻炼孩子在众人面前发表自己言论的胆量，培养他的自信。相信孩子会有更大的进步的！</p>
 						</div>
 					</div>			
 				</div>
-				<div class="ft-l">
-					<div class="ft-r">
-						<div class="ft">
+				<div class="modal-ft-l">
+					<div class="modal-ft-r">
+						<div class="modal-ft">
 							<a class="btn btn-primary" href="javascript:void(0);">确定</a>
 							<a class="btn btn-default" data-dismiss="modal" href="javascript:void(0);">取消</a>
 						</div>
@@ -216,24 +216,24 @@ function modalCenter(){
 		<h4>HTML:</h4>
 		<pre><code>&lt;div class=&quot;modal modal-complex&quot; data-launch=&quot;false&quot;&gt;
 	&lt;div class=&quot;modal-content&quot;&gt;
-		&lt;div class=&quot;hd-l&quot;&gt;
-			&lt;div class=&quot;hd-r&quot;&gt;
-				&lt;div class=&quot;hd&quot;&gt;
+		&lt;div class=&quot;modal-hd-l&quot;&gt;
+			&lt;div class=&quot;modal-hd-r&quot;&gt;
+				&lt;div class=&quot;modal-hd&quot;&gt;
 					&lt;h2 class=&quot;modal-title&quot;&gt;设置&lt;/h2&gt;
 					&lt;button type=&quot;button&quot; class=&quot;modal-close&quot; data-dismiss=&quot;modal&quot;&gt;&times;&lt;/button&gt;
 				&lt;/div&gt;
 			&lt;/div&gt;		
 		&lt;/div&gt;
-		&lt;div class=&quot;bd-l&quot;&gt;
-			&lt;div class=&quot;bd-r&quot;&gt;
-				&lt;div class=&quot;bd&quot;&gt;
+		&lt;div class=&quot;modal-bd-l&quot;&gt;
+			&lt;div class=&quot;modal-bd-r&quot;&gt;
+				&lt;div class=&quot;modal-bd&quot;&gt;
 					&lt;p class=&quot;msg-text&quot;&gt;家长您好！开学以来，孩子表现不错，课堂上认真听讲，请您及时表扬孩子。如果孩子能积极发言那就更好了，你可以引导孩子大声朗读经典文章，提高孩子语言表达能力，鼓励他大胆发言，锻炼孩子在众人面前发表自己言论的胆量，培养他的自信。相信孩子会有更大的进步的！&lt;/p&gt;
 				&lt;/div&gt;
 			&lt;/div&gt;			
 		&lt;/div&gt;
-		&lt;div class=&quot;ft-l&quot;&gt;
-			&lt;div class=&quot;ft-r&quot;&gt;
-				&lt;div class=&quot;ft&quot;&gt;
+		&lt;div class=&quot;modal-ft-l&quot;&gt;
+			&lt;div class=&quot;modal-ft-r&quot;&gt;
+				&lt;div class=&quot;modal-ft&quot;&gt;
 					&lt;a class=&quot;btn btn-primary&quot; href=&quot;javascript:void(0);&quot;&gt;确定&lt;/a&gt;
 					&lt;a class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot; href=&quot;javascript:void(0);&quot;&gt;取消&lt;/a&gt;
 				&lt;/div&gt;
@@ -246,41 +246,41 @@ function modalCenter(){
 	border:none;
 	background:none;
 }
-.modal-complex .hd{
+.modal-complex .modal-hd{
 	padding-top:10px;
 	background:url(../images/modal-complex.png) repeat-x 0 -124px;
 }
-.modal-complex .hd-l{
+.modal-complex .modal-hd-l{
 	padding-left:30px;
 	background:url(../images/modal-complex.png) no-repeat 0 0;
 }
-.modal-complex .hd-r{
+.modal-complex .modal-hd-r{
 	padding-right:30px;
 	background:url(../images/modal-complex.png) no-repeat right -62px;
 }
-.modal-complex .bd{
+.modal-complex .modal-bd{
 	background:#fff;
 }
-.modal-complex .bd-l{
+.modal-complex .modal-bd-l{
 	padding-left:10px;
 	background:url(../images/modal-complex-bdl.png) repeat-y;
 }
-.modal-complex .bd-r{
+.modal-complex .modal-bd-r{
 	padding-right:10px;
 	background:url(../images/modal-complex-bdr.png) repeat-y right top;
 }
-.modal-complex .ft{
+.modal-complex .modal-ft{
 	margin:0;
 	padding:10px 0;
 	height:40px;
 	background:url(../images/modal-complex.png) repeat-x 0 -342px;
 	overflow:hidden;
 }
-.modal-complex .ft-l{
+.modal-complex .modal-ft-l{
 	padding-left:30px;
 	background:url(../images/modal-complex.png) no-repeat 0 -186px;
 }
-.modal-complex .ft-r{
+.modal-complex .modal-ft-r{
 	padding-right:30px;
 	background:url(../images/modal-complex.png) no-repeat right -264px;
 }
@@ -297,18 +297,19 @@ function modalCenter(){
 		<dd><span class="hljs-tag"><span class="hljs-attribute">data-launch</span>=<span class="hljs-value">"false"</span></span>：是否是弹出框，布尔型true|false </dd>
 		<dd><span class="hljs-tag"><span class="hljs-attribute">data-dismiss</span>=<span class="hljs-value">"modal"</span></span>：关闭弹出层</dd>
 	</dl>
+	<footer class="footer"><!--页尾--></footer>
 </div>
 <!----------------         弹出框 开始          ------------------->
 <div class="modal" id="modal01" data-launch="true">
 	<div class="modal-content">
-		<div class="hd">
+		<div class="modal-hd">
 			<h2 class="modal-title">设置</h2>
 			<button type="button" class="modal-close" data-dismiss="modal">&times;</button>
 		</div>
-		<div class="bd">
+		<div class="modal-bd">
 			<p class="msg-text">家长您好！开学以来，孩子表现不错，课堂上认真听讲，请您及时表扬孩子。如果孩子能积极发言那就更好了，你可以引导孩子大声朗读经典文章，提高孩子语言表达能力，鼓励他大胆发言，锻炼孩子在众人面前发表自己言论的胆量，培养他的自信。相信孩子会有更大的进步的！</p>
 		</div>
-		<div class="ft">
+		<div class="modal-ft">
 			<a class="btn btn-primary" href="javascript:void(0);">确定</a>
 			<a class="btn btn-default" data-dismiss="modal" href="javascript:void(0);">取消</a>
 		</div>
@@ -316,17 +317,17 @@ function modalCenter(){
 </div>
 <div class="modal modal-complex" id="modal02" data-launch="true">
 	<div class="modal-content">
-		<div class="hd-l">
-			<div class="hd-r">
-				<div class="hd">
+		<div class="modal-hd-l">
+			<div class="modal-hd-r">
+				<div class="modal-hd">
 					<h2 class="modal-title">设置</h2>
 					<button type="button" class="modal-close" data-dismiss="modal">&times;</button>
 				</div>
 			</div>		
 		</div>
-		<div class="bd-l">
-			<div class="bd-r">
-				<div class="bd">
+		<div class="modal-bd-l">
+			<div class="modal-bd-r">
+				<div class="modal-bd">
 					<p class="msg-text">家长您好！开学以来，孩子表现不错，课堂上认真听讲，请您及时表扬孩子。如果孩子能积极发言那就更好了，你可以引导孩子大声朗读经典文章，提高孩子语言表达能力，鼓励他大胆发言，锻炼孩子在众人面前发表自己言论的胆量，培养他的自信。相信孩子会有更大的进步的！</p>
 					<p class="msg-text">家长您好！开学以来，孩子表现不错，课堂上认真听讲，请您及时表扬孩子。如果孩子能积极发言那就更好了，你可以引导孩子大声朗读经典文章，提高孩子语言表达能力，鼓励他大胆发言，锻炼孩子在众人面前发表自己言论的胆量，培养他的自信。相信孩子会有更大的进步的！</p>
 					<p class="msg-mate">
@@ -336,9 +337,9 @@ function modalCenter(){
 				</div>
 			</div>			
 		</div>
-		<div class="ft-l">
-			<div class="ft-r">
-				<div class="ft">
+		<div class="modal-ft-l">
+			<div class="modal-ft-r">
+				<div class="modal-ft">
 					<a class="btn btn-primary" href="javascript:void(0);">确定</a>
 					<a class="btn btn-default" data-dismiss="modal" href="javascript:void(0);">取消</a>
 				</div>
@@ -350,7 +351,7 @@ function modalCenter(){
 
 
 <!----------------         弹出框 结束          ------------------->
-<script src="../js/jquery.js"></script>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="../js/myscript.js"></script>
 <script src="../highlight/highlight.pack.js"></script>
 <script>

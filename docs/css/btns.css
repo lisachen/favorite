@@ -19,9 +19,6 @@
 	background-color: #FFF;
 	color: #333;
 }
-.btn-default:hover{
-	
-}
 .btn-primary{
 	border-color: #357EBD;
 	background-color: #0895DA;
@@ -55,8 +52,62 @@
 .btn-link:hover{
 	text-decoration:underline;
 }
-
-
+.btn-file{
+	position:relative;
+}
+.btn-file input{
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	width:50px;
+	font-size:30px;/*使按钮足够大*/
+ 	filter:alpha(opacity=0);  
+  	-moz-opacity:0;  
+  	-khtml-opacity: 0;  
+  	opacity: 0;
+	cursor:pointer;
+}
+.btn-loadding{
+	color: transparent;
+	background:#f0f0f0 url(../images/loading_s.gif) no-repeat center;
+	cursor: default;
+	pointer-events: none;/*是否能穿透绝对定位元素去触发下面元素的某些行为,Firefox3.6+/Safari4+/Chrome支持*/
+}
+/*按钮组合*/
+.btn-group{
+	_padding-left:1px;
+	overflow:hidden;
+	*zoom:1	
+}
+.btn-group label{
+	float:left;
+	margin-left:-1px;
+}
+.btn-group .checked{
+	background-color:#f0f0f0;
+}
+.btn-group .btn:first-child {
+	margin-left: 0;
+}
+.btn-group>.btn:first-child:not(:last-child){
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.btn-group>.btn:not(:first-child):not(:last-child){
+	border-radius: 0;
+}	
+.btn-group>.btn:last-child:not(:first-child){
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.btn-group input{
+	position: absolute;
+	clip: rect(0,0,0,0);
+	clip: rect(0 0 0 0);
+	pointer-events: none;
+	*star:expression(this.onFocus=this.blur()); /* for Ie*/ 
+}
 
 
 /**/

@@ -88,7 +88,7 @@ body{
 	})
 </script>
 <![endif]-->
-<nav class="topNav"></nav>
+<nav class="topNav"><!--页头--></nav>
 <div class="wrapper-box inner">
 	<h1 class="article-Title">css3动画效果</h1>
 	<ul class="t-m fn-clearfix">
@@ -212,14 +212,14 @@ body{
 					-webkit-border-radius: 19px;
 					-moz-border-radius: 19px;
 					border-radius: 19px;
-					-webkit-transition: width .25s ease-in-out, background-color .25s ease-in-out;
-					-moz-transition: width .25s ease-in-out, background-color .25s ease-in-out;
-					-o-transition: width .25s ease-in-out, background-color .25s ease-in-out;
-					transition: width .25s ease-in-out, background-color .25s ease-in-out;
 					-webkit-box-shadow: rgba(0, 0, 0, 0.28) 0 2px 3px;
 					-moz-box-shadow: rgba(0,0,0, .28) 0 2px 3px;
 					-o-box-shadow: rgba(0,0,0, .28) 0 2px 3px;
 					box-shadow: rgba(0, 0, 0, 0.28) 0 2px 3px;
+					-webkit-transition: width .25s ease-in-out, background-color .25s ease-in-out;
+					-moz-transition: width .25s ease-in-out, background-color .25s ease-in-out;
+					-o-transition: width .25s ease-in-out, background-color .25s ease-in-out;
+					transition: width .25s ease-in-out, background-color .25s ease-in-out;
 				}
 				.t-like a:hover{
 					width:208px;
@@ -237,10 +237,52 @@ body{
 			</style>
 		</li>
 		<li>
-			<a href="javascript:void(0)"><img src="../images/test/dw.png" alt=""></a>
+			<a class="t-add" href="javascript:void(0)"><img src="../images/test/dw.png" alt=""></a>
 			<buttom id="t-btn">按钮</buttom>
 			<style>
+				.t-add{
+					position:relative;
+					transition: 0.6s;
+					-moz-transition: 0.6s;
+					-webkit-transition: 0.6s;
+					-o-transition: 0.6s;
 					
+				}
+				.t-add:hover{
+					text-decoration:none;
+				}
+				.t-add:hover:after {
+					-webkit-animation: t-add .6s linear;
+					-moz-animation: t-add .6s linear;
+					-o-animation: t-add .6s linear;
+					animation: t-add .6s linear;
+					-webkit-animation-fill-mode: backwards;/*设置对象状态为动画开始时的状态*/
+					-moz-animation-fill-mode: backwards;
+					-o-animation-fill-mode: backwards;
+					animation-fill-mode: backwards;
+				}
+				.t-add:after{
+					position:absolute;
+					left:0;
+					top:0;
+					content:'+1';
+					color:red;
+					opacity:0;
+				}
+				@-webkit-keyframes t-add{
+					0%{
+					-webkit-transform:translateY(0);
+					opacity:0;
+					}
+					50%{
+					-webkit-transform:translateY(-14px);
+					opacity:1;
+					}
+					100% {
+					-webkit-transform:translateY(-30px);
+					opacity:0
+					}
+				}
 			</style>
 		</li>
 		<li>
@@ -565,8 +607,20 @@ body{
 			</style>
 		</li>
 	</ul>
+	<hr>
+	<div class="sea box">
+		<div class="wave wave01"></div>
+		<div class="wave wave02"></div>
+		<div class="boat"></div>
+		<div class="cloud cloud01"></div>
+		<div class="cloud cloud02"></div>
+		<div class="wave wave03"></div>
+		<div class="wave wave04"></div>
+	</div>
+	<br><br><br><br><br><br><br><br><br><br><br>
+	<footer class="footer"><!--页尾--></footer>
 </div>
-<script src="../js/jquery.js"></script>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="../js/myscript.js"></script>
 <script src="../highlight/highlight.pack.js"></script>
 <script>
