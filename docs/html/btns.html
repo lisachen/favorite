@@ -1,0 +1,102 @@
+<!doctype html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="zh-CN"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh-CN">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="这是里是关键字">
+<meta name="description" content=" 网站内容描述">
+<meta name="author" content="网站作者">
+<link rel="shortcut icon" href="images/favicon.ico">
+<title>按钮</title>
+<link href="../css/public.css" rel="stylesheet">
+<link href="../css/common.css" rel="stylesheet">
+<link href="../css/page.css" rel="stylesheet">
+<link href="../css/btn.css" rel="stylesheet">
+</head>
+<body>
+<!--[if  IE 6]> 
+<div id="ie6-warning">
+	您正在使用IE6或以IE6为内核的浏览器，可能导致本网站无法正常显示，建议您升级到更高版本。<a href="http://www.microsoft.com/china/windows/internet-explorer/"
+		target="_blank">点击下载</a><a id="ie6-close href="javascript:void(0)"">关闭</a>
+</div>
+<script src="../js/DD_belatedPNG.js"></script>	
+<script>
+	DD_belatedPNG.fix('.ie6-png'); 
+	$body=$('body');
+	$body.addClass('ie6');
+	$('#ie6-close').click(function(){
+		$body.removeClass('ie6');
+		$('#ie6-warning').hide();
+	})
+</script>
+<![endif]-->
+<div class="wrapper inner">
+	<!--按钮 开始-->
+	<h2>button按钮</h2>
+	<button class="btn btn-default" type="button">默认</button>
+	<button class="btn btn-primary" type="button">主要的</button>
+	<button class="btn btn-success" type="button">success</button>
+	<button class="btn btn-info" type="button">info</button>
+	<button class="btn btn-warning" type="button">warning</button>
+	<button class="btn btn-danger" type="button">danger</button>
+	<button class="btn btn-link" type="button">link</button>
+	<hr>
+	<h2>a按钮</h2>
+	<a class="btn btn-default" href="javascript:void(0)">默认</a>
+	<a class="btn btn-primary" href="javascript:void(0)">主要的</a>
+	<a class="btn btn-success" href="javascript:void(0)">success</a>
+	<a class="btn btn-info" href="javascript:void(0)">info</a>
+	<a class="btn btn-warning" href="javascript:void(0)">warning</a>
+	<a class="btn btn-danger" href="javascript:void(0)">danger</a>
+	<a class="btn btn-link" href="javascript:void(0)">link</a>
+	<!--按钮 结束-->
+	<hr>
+	<h2>圆角渐变按钮</h2>
+	<div class="case">
+		<a class="btn-01"><span>使用图片滑动门</span></a>
+		<a class="btn-01"><span>按钮</span></a>
+	</div>
+	<p>优点：兼容IE7及以上浏览器，只用了两个标签,按钮内字数可扩展</p>
+	<p>缺点：使用透明图片IE6不支持，圆角处需填充背景色，再背景不同的环境下按钮不能通用</p>
+	<hr>
+	<a class="btn-02">使用css3</a>
+	<a class="btn-02">按钮</a>
+	<style>
+		.btn-01{
+			display:inline-block;
+			background:url(../images/btn_sprits.png) no-repeat right top;
+		}
+		.btn-01 span{
+			display:inline-block;
+			height:26px;
+			line-height:26px;
+			padding:0 20px;
+			background:url(../images/btn_sprits.png) no-repeat left -26px;
+			color:#fff;
+		}
+		.btn-02{
+			display:inline-block;
+			height: 26px;
+			padding:0 20px;
+			line-height:26px;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;
+			background-color: #9cbc90;
+			color:#fff;
+			background-image: -webkit-linear-gradient(bottom, #ff7200, #ffa904);
+			background-image: -moz-linear-gradient(bottom, #ff7200, #ffa904);
+			background-image: -o-linear-gradient(bottom, #ff7200, #ffa904);
+			background-image: -ms-linear-gradient(bottom, #ff7200, #ffa904);
+			background-image: linear-gradient(to top, #ff7200, #ffa904);
+		}
+	</style>
+</div>
+
+<!----------------         弹出框 结束          ------------------->
+<script src="../js/jquery.js"></script>
+<script src="../js/myscript.js"></script>
+</body>
+</html>

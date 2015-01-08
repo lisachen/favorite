@@ -13,7 +13,7 @@
 <link href="../css/public.css" rel="stylesheet">
 <link href="../css/common.css" rel="stylesheet">
 <link href="../css/page.css" rel="stylesheet">
-<link href="../css/form.css" rel="stylesheet">
+<link href="../highlight/styles/github.css" rel="stylesheet">
 </head>
 <body>
 <!--[if  IE 6]> 
@@ -30,8 +30,47 @@
 	})
 </script>
 <![endif]-->
-<div class="inner">
-	<h2>导航</h2>
+<nav class="topNav">
+	<ul class="navs inner fn-clearfix">
+		<li><a class="logo" href="../../index.html"><strong>&lt;favorite/&gt;</strong></a></li>
+		<li><a href="form.html">表单</a></li>
+		<li><a href="modal.html">弹出框</a></li>
+		<li><a href="align.html">对齐方式</a></li>
+		<li><a href="tab.html">标签切换</a></li>
+		<li><a href="css3-animation.html">CSS3动画</a></li>
+		<li><a href="imgTxt.html">图文类</a></li>
+		<li><a href="back-to-top.html">返回顶部</a></li>
+		<li><a href="img-replace-text.html">图片替代文字</a></li>
+	</ul>
+</nav>
+<div class="wrapper-box inner">
+	<h1 class="article-Title">常见图文类型实例</h1>
+	<div class="links">
+		<a href="#txt">文字类</a>
+		<a href="#img">图片类</a>
+		<a href="#imgTxt">图文类</a>
+	</div>
+	<h2 id="txt">文字类</h2>
+	<div class="box">
+		<h3>面包屑导航：</h3>
+		<p class="breadcrumb">您的位置：<a href="javascript:void(0)">首页</a>&gt;<span>交流互动专区</span></p>
+		<h4>HTML:</h4>
+		<pre><code>&lt;p class=&quot;breadcrumb&quot;&gt;您的位置：&lt;a href=&quot;javascript:void(0)&quot;&gt;首页&lt;/a&gt;&lt;span&gt;交流互动专区&lt;/span&gt;&lt;/p&gt;</code></pre>
+	</div>
+	<div class="box">
+		<h3>文章列表：</h3>
+		<ul class="list">
+			<li><a class="title" href="javascript:void(0)" title="阳泉市突出“广”“精”“严阳泉市突出">阳泉市突出“广”“精”“严 …</a><span class="time">14-03-18</span></li>
+			<li><a class="title" href="javascript:void(0)" title="芮城一学生拾金不昧被称“美少芮城一学生拾金不">芮城一学生拾金不昧被称“美少…</a><span class="time">14-03-18</span></li>
+			<li><a class="title" href="javascript:void(0)" title="贵都小学:召开期末复习研讨会贵都小学">贵都小学:召开期末复习研讨会</a><span class="time">14-03-18</span></li>
+		</ul>
+	</div>
+	
+	<hr>
+	<h2 id="img">图片类</h2>
+	
+	<hr>
+	<h2 id="imgTxt">图文类</h2>
 	<p class="breadcrumb">您的位置：<a href="javascript:void(0)">首页</a>&gt;<span>交流互动专区</span></p>
 
 	<h2>文章列表</h2>
@@ -125,5 +164,9 @@
 </div>
 <script src="../js/jquery.js"></script>
 <script src="../js/myscript.js"></script>
+<script src="../highlight/highlight.pack.js"></script>
+<script>
+ hljs.initHighlightingOnLoad('html','css');
+</script>
 </body>
 </html>

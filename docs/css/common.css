@@ -177,11 +177,10 @@
 }
 .tab-nav li {
 	float: left;
-	text-align: center;
 	cursor:pointer;
 }
 .tab-nav .cur{
-	border-bottom:2px solid red;
+	background-color:#eee;
 }
 .tab-content .tab-pane{
 	display:none;
@@ -262,6 +261,7 @@
 }
 /*modal-complex 切图合成*/
 .modal-complex .modal-content{
+	border:none;
 	background:none;
 }
 .modal-complex .hd{

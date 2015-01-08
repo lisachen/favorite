@@ -1,8 +1,10 @@
+
 /*-- 文字垂直居中 --*/
 .txt-middle{
+	margin-bottom:10px;
 	padding:10px;
-	border:1px dashed #D1E1F1;
-	background-color:#F2F5FA;
+	border:1px dashed #ddd;
+	background-color:#fefefe;
 	line-height:160px;
 	font-size:0;
 }
@@ -16,8 +18,40 @@
 	display:inline-block;
 	vertical-align:middle;
 }
-.mulit_line{line-height:150px; border:1px dashed #cccccc; padding-left:5px; font-size:0;}
-.mulit_line span{display:inline-block; line-height:1.4em; vertical-align:middle;}
+/*-- 3. --*/
+.box03 .parent{
+	margin-bottom:10px;
+	height:90px;
+	border:1px dashed #ddd;
+	background-color:#fefefe;	
+}
+.box03 .extra{
+	float:left;
+	height:50%;
+	margin-bottom:-30px;	
+}
+.box03 .details{
+	position:relative;	
+	height:60px;
+	background-color:#ddd;
+	clear:both;	
+}
+/*-- 5. --*/
+.box05 .parent {
+	height: 100px;
+	border:1px dashed #ddd;
+	background-color:#fefefe;
+}
+.box05 .details,
+.box05 .extra {
+	display: inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align: middle;
+}
+.box05 .extra {
+	height: 100%;
+}
 /*-- 图片垂直居中 --*/
 .img-middle{
 	font-size:0;
@@ -37,10 +71,56 @@
 .img-middle li img{
 	vertical-align:middle;
 }
-
+/*-- --*/
+.imgs li{
+	float:left;
+	border:1px dashed #D1E1F1;
+	font-size:0;
+}
+.imgs li a{
+	display:table-cell;
+	*display:block;
+	width:160px;
+	height:130px;
+	text-align:center;
+	vertical-align:middle;
+	overflow:hidden;
+}
+.imgs img{
+	vertical-align:middle;
+}
+.imgs span {
+	*display: inline-block;
+	vertical-align: middle;
+	*height: 100%;
+}
+.imgs {
+	_height: 0;
+	*zoom: 1;
+}
+/*-box-translate-*/
+.box-translate .parent{
+	position:relative;
+	height: 100px;
+	margin-bottom:10px;
+	border:1px dashed #ddd;
+	background-color:#fefefe;
+}
+.translate-center{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background-color:#eee;
+	-webkit-transform: translate(-50%, -50%) ;
+	-moz-transform: translate(-50%, -50%) ;
+	-ms-transform: translate(-50%, -50%) ;
+	-o-transform: translate(-50%, -50%) ;
+	transform: translate(-50%, -50%) ;
+}
+/*-- 两端对齐 --*/
 .jusyify{
 	text-align:justify;
-	/*font-size:0;*/
+	font-size:0;
 }
 .jusyify01 li{
 	display:inline-block;
@@ -52,7 +132,6 @@
 	text-align:center;
 	vertical-align:top;
 }
-
 .jusyify02 span{
 	display:inline-block;
 	width:160px;
@@ -61,5 +140,3 @@
 	text-align:center;
 	vertical-align:top;
 }
-.box{width:50%; padding:20px; margin:20px auto; background-color:#f0f3f9; text-align:justify;}
-.list{width:120px; display:inline-block; padding-bottom:20px; text-align:center; vertical-align:top;}

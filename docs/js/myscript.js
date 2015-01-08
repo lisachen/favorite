@@ -8,7 +8,7 @@
 	$(".tab-nav li").click(function() {
 		var _this=$(this),
 			s=_this.index(),
-			$pane=_this.parents('.module').first().find('.tab-pane').eq(s);
+			$pane=_this.parents('.tab').first().find('.tab-pane').eq(s);
 		//var	$pane=$(_this.find('a').attr('href'));//用id切换
 		a_s_r(_this,'cur');
 		a_s_r($pane,'cur');
@@ -22,7 +22,7 @@
 		modalCenter();
 	})
 	$('[data-dismiss="modal"]').click(function(){
-		$('.modal').hide();
+		$(this).parents('.modal').hide();
 		$('.modal-backdrop').remove();
 		$('body').removeClass('modal-open').css('padding-right','');
 	})
@@ -128,8 +128,8 @@ function placeholder(obj){
 	});
 }
 //弹出框居中
-function modalCenter(){
-	var	$targetC=$('.modal-content:visible'),
+function modalCenter(){	
+	var	$targetC=$('.modal[data-launch="true"]').find('.modal-content:visible'),
 		mH=$targetC.height(),
 		allH=$(document).height(),//document.body.scrollHeight,//网页正文全文高
 		wH=$(window).height();//document.body.clientHeight;//网页可见区域高

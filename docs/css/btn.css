@@ -1,0 +1,86 @@
+/*btn*/
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	text-align: center;
+	border: 1px solid #ccc;
+	background:none;
+	vertical-align: middle;
+	cursor:pointer;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.btn:hover{
+	text-decoration:none;
+}
+.btn-default{
+	border-color: #CCC;
+	background-color: #FFF;
+	color: #333;
+}
+.btn-default:hover{
+	
+}
+.btn-primary{
+	border-color: #357EBD;
+	background-color: #0895DA;
+	color: #FFF;	
+}
+.btn-success{
+	border-color: #4CAE4C;
+	background-color: #5CB85C;
+	color: #FFF;
+}
+.btn-info{
+	border-color: #46B8DA;
+	background-color: #5BC0DE;
+	color: #FFF;
+}
+.btn-warning{
+	border-color: #EEA236;	
+	background-color: #F0AD4E;
+	color: #FFF;
+}
+.btn-danger{
+	border-color: #D43F3A;
+	background-color: #D9534F;
+	color: #FFF;
+}
+.btn-link{
+	border:none;
+	color: #428BCA;
+	border-radius: 0;
+}
+.btn-link:hover{
+	text-decoration:underline;
+}
+
+
+
+
+/**/
+.btn-s {
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+}
+.btn-m {
+	width: 200px;
+	height: 50px;
+	font: 18px/50px 'Microsoft Yahei';
+}
+.btn-xl {
+	width: 294px;
+	height: 50px;
+	font: 18px/50px 'Microsoft Yahei';
+}
+.btn-org { background-color: #ffa44c; }
+.btn-org:hover { background-color: #FA8819; }
+.btn-blue { background-color: #40B7FF; }
+.btn-blue:hover { background-color: #049EFB; }
+.btn-disabled, .btn-disabled:hover {
+	background-color: #92CDF1;
+	color: #01436b;
+}

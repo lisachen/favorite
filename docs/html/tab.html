@@ -5,15 +5,15 @@
 <!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<meta name="keywords" content="这是里是关键字">
-<meta name="description" content=" 网站内容描述">
-<meta name="author" content="网站作者">
+<meta name="keywords" content="前端,HTML,css,css3,javascript,jquery">
+<meta name="description" content="用CSS和jquery制作标签（tab）切换效果">
+<meta name="author" content="Lisa Chen">
 <link rel="shortcut icon" href="images/favicon.ico">
 <title>tab切换</title>
 <link href="../css/public.css" rel="stylesheet">
 <link href="../css/common.css" rel="stylesheet">
 <link href="../css/page.css" rel="stylesheet">
-<link href="../css/form.css" rel="stylesheet">
+<link href="../highlight/styles/github.css" rel="stylesheet">
 </head>
 <body>
 <!--[if  IE 6]> 
@@ -30,18 +30,28 @@
 	})
 </script>
 <![endif]-->
-<div class="inner">
-
-<h2>普通切换-内容全部加载（安排顺序对应）</h2>
-<div class="module">
-	<div class="hd">
-		<ul class="tab-nav">
+<nav class="topNav">
+	<ul class="navs inner fn-clearfix">
+		<li><a class="logo" href="../../index.html"><strong>&lt;favorite/&gt;</strong></a></li>
+		<li><a href="form.html">表单</a></li>
+		<li><a href="modal.html">弹出框</a></li>
+		<li><a href="align.html">对齐方式</a></li>
+		<li><a href="tab.html">标签切换</a></li>
+		<li><a href="css3-animation.html">CSS3动画</a></li>
+		<li><a href="imgTxt.html">图文类</a></li>
+		<li><a href="back-to-top.html">返回顶部</a></li>
+		<li><a href="img-replace-text.html">图片替代文字</a></li>
+	</ul>
+</nav>
+<div class="wrapper-box inner">
+	<h1 class="article-Title">标签（Tab）切换的实现方法</h1>
+	<h2>普通切换-内容全部加载（安排顺序对应）</h2>
+	<div class="tab module">
+		<ul class="tab-nav hd">
 			<li class="cur">标签1</li>
 			<li>标签2</li>
 		</ul>
-	</div>
-	<div class="bd"> 
-		<ul class="tab-content">
+		<ul class="tab-content bd">
 			<li class="tab-pane cur">
 				111...
 			</li>
@@ -49,46 +59,136 @@
 				222...
 			</li>
 		</ul>
-	</div>
-</div><!--/module-->
-
-<h2>普通切换-内容全部加载（更具ID对应）</h2>
-<div class="module">
-	<div class="hd">
-		<ul class="tab-nav">
-			<li class="cur"><a href="#tab01">标签一</a></li>
-			<li><a href="#tab02">标签二</a></li>
-		</ul>
-	</div>
-	<div class="bd"> 
-		<ul class="tab-content">
-			<li class="tab-pane cur" id="tab01">
-				111...
-			</li>
-			<li class="tab-pane" id="tab02">
-				222...
-			</li>
-		</ul>
-	</div>
-</div><!--/module-->
-
-
-<h2>只有标签切换-内容动态加载</h2>
-<div class="module">
-	<div class="hd">
-		<ul class="tab-nav">
-			<li class="cur"><a href="javascript:void(0)">标签一</a></li>
-			<li><a href="javascript:void(0)">标签二</a></li>
-		</ul>
-	</div>
-	<div class="bd"> 
+	</div><!--/module-->
+	<h4>HTML:</h4>
+	<pre><code>&lt;div class=&quot;tab module&quot;&gt;
+	&lt;ul class=&quot;tab-nav hd&quot;&gt;
+		&lt;li class=&quot;cur&quot;&gt;标签1&lt;/li&gt;
+		&lt;li&gt;标签2&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;ul class=&quot;tab-content bd&quot;&gt;
+		&lt;li class=&quot;tab-pane cur&quot;&gt;
+			111...
+		&lt;/li&gt;
+		&lt;li class=&quot;tab-pane&quot;&gt;
+			222...
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+	<h4>CSS:</h4>
+	<pre><code>.tab-nav {
+	position: relative;
+	overflow: hidden;
+}
+.tab-nav li {
+	float: left;
+	border:1px solid #eee;
+	border-bottom:none;
+	margin-right:8px;
+	padding:0 20px;
+	line-height:30px;
+	font-size:14px;
+	cursor:pointer;
+}
+.tab-nav .cur{
+	background-color:#FAFAFA;
+}
+.tab-content{
+	margin-top: -1px;
+	border:1px solid #eee;
+	background-color:#FAFAFA;
+	height:100px;
+}
+.tab-content .tab-pane{
+	display:none;
+}
+.tab-content .cur {
+	display:block;
+}</code></pre>
+	<h4>Jquery:</h4>
+	<pre><code>$('.tab-nav li').click(function() {
+	var _this=$(this),
+		s=_this.index(),
+		$pane=_this.parents('.tab').first().find('.tab-pane').eq(s);
+	a_s_r(_this,'cur');
+	a_s_r($pane,'cur');
+});
+function a_s_r(o,c){
+	o.addClass(c).siblings().removeClass(c);	
+}
+</code></pre>
+	<dl class="explain">
+		<dt><h3>注：</h3></dt>
+		<dd>如果想鼠标经过切换，将jquery中的click事件换成hover事件。</dd>
+		<dd>如果切换的内容是用js动态处理的，就不能使用<span class="hljs-attribute">display</span>:<span class="hljs-value">none</span>，可以换成<span class="hljs-attribute">visibility</span>:<span class="hljs-value">hidden</span>。</dd>
+	</dl>
+	<hr>
+	<h2>普通切换-内容全部加载（更具ID对应）</h2>
+	<h4>HTML:</h4>
+	<pre><code>&lt;div class=&quot;tab module&quot;&gt;
+	&lt;ul class=&quot;tab-nav hd&quot;&gt;
+		&lt;li class=&quot;cur&quot;&gt;&lt;a href=&quot;#tab01&quot;&gt;标签一&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#tab02&quot;&gt;标签二&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;ul class=&quot;tab-content bd&quot;&gt;
+		&lt;li class=&quot;tab-pane cur&quot; id=&quot;tab01&quot;&gt;
+			111...
+		&lt;/li&gt;
+		&lt;li class=&quot;tab-pane&quot; id=&quot;tab02&quot;&gt;
+			222...
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+	<h4>Jquery:</h4>
+	<pre><code>$(".tab-nav li").click(function() {
+	var	_this=$(this),
+		$pane=$(_this.find('a').attr('href'));
+	a_s_r(_this,'cur');
+	a_s_r($pane,'cur');
+});
+function a_s_r(o,c){
+	o.addClass(c).siblings().removeClass(c);	
+}</code></pre>
+	<hr>
+	<h2>只有标签切换-内容动态加载</h2>
+	<div class="tab module">
+		<div class="hd">
+			<ul class="tab-nav">
+				<li class="cur"><a href="javascript:void(0)">标签一</a></li>
+				<li><a href="javascript:void(0)">标签二</a></li>
+			</ul>
+		</div>
+		<div class="bd"> 
+			内容...
+		</div>
+	</div><!--/module-->
+	<h4>HTML:</h4>
+	<pre><code>&lt;div class=&quot;tab module&quot;&gt;
+	&lt;div class=&quot;hd&quot;&gt;
+		&lt;ul class=&quot;tab-nav&quot;&gt;
+			&lt;li class=&quot;cur&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;标签一&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;标签二&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;bd&quot;&gt; 
 		内容...
-	</div>
-</div><!--/module-->
-
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+	<h4>Jquery:</h4>
+	<pre><code>$(".tab-nav li").click(function() {
+	var	_this=$(this);
+	a_s_r(_this,'cur');
+})
+function a_s_r(o,c){
+	o.addClass(c).siblings().removeClass(c);	
+}</code></pre>
 </div>
 <!----------------         弹出框 结束          ------------------->
 <script src="../js/jquery.js"></script>
 <script src="../js/myscript.js"></script>
+<script src="../highlight/highlight.pack.js"></script>
+<script>
+ hljs.initHighlightingOnLoad('html','css');
+</script>
 </body>
 </html>

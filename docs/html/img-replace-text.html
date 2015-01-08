@@ -1,0 +1,184 @@
+﻿<!doctype html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="zh-CN"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh-CN">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="前端,HTML,css,css3,javascript,jquery">
+<meta name="description" content="用css实现图片替换文本的方法介绍分析">
+<meta name="author" content="Lisa Chen">
+<link rel="shortcut icon" href="images/favicon.ico">
+<title>图片替换文本</title>
+<link href="../css/public.css" rel="stylesheet">
+<link href="../css/page.css" rel="stylesheet">
+<link href="../highlight/styles/github.css" rel="stylesheet">
+</head>
+<body>
+<!--[if  IE 6]> 
+<div id="ie6-warning">
+	您正在使用IE6或以IE6为内核的浏览器，可能导致本网站无法正常显示，建议您升级到更高版本。<a href="http://www.microsoft.com/china/windows/internet-explorer/"
+		target="_blank">点击下载</a><a id="ie6-close href="javascript:void(0)"">关闭</a>
+</div>
+<script>
+	$body=$('body');
+	$body.addClass('ie6');
+	$('#ie6-close').click(function(){
+		$body.removeClass('ie6');
+		$('#ie6-warning').hide();
+	})
+</script>
+<![endif]-->
+<style>
+.box{
+	width:48%;
+	min-height:580px;
+	padding-bottom:20px;
+	margin-bottom:20px;
+	border-bottom:1px dashed #ccc;
+}
+.box p{
+	padding:10px 0;
+	font-size:14px;
+}
+.text{
+	display:block;
+	width:100px;
+	height:100px;
+}
+.method-01{
+	background:url(../images/test/text_bg.jpg) no-repeat;
+	text-indent:-9999em;
+	overflow:hidden;
+}
+.method-02{
+	background:url(../images/test/text_bg.jpg) no-repeat;
+	line-height:100;
+	overflow:hidden;
+}
+.method-03{
+	background:url(../images/test/text_bg.jpg) no-repeat;
+}
+.method-03 span{
+	display:none;
+}
+.method-04{
+	background:url(../images/test/text_bg.jpg) no-repeat;
+	padding-top:100px;
+	height: 0px;
+	font-size: 0;
+	overflow: hidden;	
+}
+.method-05{
+	position: relative; 
+}
+.method-05 span{
+	background:url(../images/test/text_bg.jpg) no-repeat; 
+	position: absolute; 
+	width: 100%; 
+	height: 100%; 
+}
+</style>
+<nav class="topNav">
+	<ul class="navs inner fn-clearfix">
+		<li><a class="logo" href="../../index.html"><strong>&lt;favorite/&gt;</strong></a></li>
+		<li><a href="form.html">表单</a></li>
+		<li><a href="modal.html">弹出框</a></li>
+		<li><a href="align.html">对齐方式</a></li>
+		<li><a href="tab.html">标签切换</a></li>
+		<li><a href="css3-animation.html">CSS3动画</a></li>
+		<li><a href="imgTxt.html">图文类</a></li>
+		<li><a href="back-to-top.html">返回顶部</a></li>
+		<li><a href="img-replace-text.html">图片替代文字</a></li>
+	</ul>
+</nav>
+<div class="wrapper-box inner fn-clearfix">
+	<h1 class="article-Title">用图片替换文本的方法</h1>
+	<h3>公共样式</h3>
+	<pre class="css"><code>.text{
+	display:block;
+	width:100px;
+	height:100px;
+}</code></pre>	
+	<div class="box fn-fl">
+		<h2>1.使用text-index负值</h2>
+		<a class="method-01 text" href="javascript:void(0)">文字</a>
+		<h3>HTML:</h3>
+		<pre><code class="html">&lt;a class=&quot;method-01 text&quot;&gt;文字&lt;/a&gt;		</code></pre>
+		<h3>CSS:</h3>
+		<pre class="css"><code>.method-01{
+	background:url(../images/test/text_bg.jpg) no-repeat;
+	text-indent:-9999em;
+	overflow:hidden;
+}</code></pre>
+		<p>这种方法简单易懂而且支持阅读器之类浏览网页。</p>
+	</div>
+	<div class="box fn-fr">
+		<h2>2.使用line-height</h2>
+		<a class="method-02 text" href="javascript:void(0)">文字</a>
+		<h3>HTML:</h3>
+		<pre><code class="html">&lt;a class=&quot;method-02 text&quot;&gt;文字&lt;/a&gt;		</code></pre>
+		<h3>CSS:</h3>
+		<pre><code class="css">.method-02{
+	background:url(../images/test/text_bg.jpg) no-repeat;
+	line-height:100;
+	overflow:hidden;
+}</code></pre>
+		<p>这种方法简单易懂而且支持阅读器之类浏览网页。</p>
+	</div>
+	<div class="box fn-fl">
+		<h2>3.设置文本不显示</h2>
+		<a class="method-03 text" href="javascript:void(0)"><span>文字</span></a>
+		<h3>HTML:</h3>
+		<pre><code class="html">&lt;a class=&quot;method-03 text&quot;&gt;&lt;span&gt;文字&lt;/span&gt;&lt;/a&gt;</code></pre>
+		<h3>CSS:</h3>
+		<pre><code class="css">.method-03{
+	background:url(../images/test/text_bg.jpg) no-repeat;
+}
+.method-03 span{
+	display:none;
+}</code></pre>
+		<p>就是当图片无法显示时，将导致这个区域没有任何内容;使用 display:none 的方式隐藏的内容，不利于阅读器浏览网页，因此，应该尽量避免使用。</p>
+	</div>
+	<div class="box fn-fr">
+		<h2>4.设置高度为0</h2>
+		<a class="method-04 text" href="javascript:void(0)">文字</a>
+		<h3>HTML:</h3>
+		<pre><code class="html">&lt;a class=&quot;method-04 text&quot;&gt;文字&lt;/a&gt;		</code></pre>
+		<h3>CSS:</h3>
+		<pre><code class="css">.method-04{
+	padding-top:100px;
+	height: 0px;
+	font-size: 0;
+	overflow: hidden;
+	background:url(../images/test/text_bg.jpg) no-repeat;	
+}		</code></pre>
+		<p>需要设置一个与替换图片一样的大小的padding值。</p>
+	</div>
+	<div class="box fn-fl">
+		<h2>5.用图片盖住文字</h2>
+		<a class="method-05 text" href="javascript:void(0)"><span></span>文字</a>
+		<h3>HTML:</h3>
+		<pre><code class="html">&lt;a class=&quot;method-05 text&quot;&gt;&lt;span&gt;&lt;/span&gt;文字&lt;/a&gt;	</code></pre>
+		<h3>CSS:</h3>
+		<pre><code class="css">.method-05 {
+	position: relative; 
+}
+.method-05 span {
+	position: absolute; 
+	width: 100%; 
+	height: 100%; 
+	background:url(../images/test/text_bg.jpg) no-repeat;
+}</code></pre>
+		<p>这种方法的原理是用一个空标签放背景图片并覆盖在文字内容上面，图片必须是不透明的。优点：解决浏览器禁用图像时的空白问题</p>
+	</div>
+</div>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/myscript.js"></script>
+<script src="../highlight/highlight.pack.js"></script>
+<script>
+ hljs.initHighlightingOnLoad('html','css');
+</script>
+</body>
+</html>

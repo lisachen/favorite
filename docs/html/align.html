@@ -5,15 +5,15 @@
 <!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<meta name="keywords" content="这是里是关键字">
-<meta name="description" content=" 网站内容描述">
-<meta name="author" content="网站作者">
+<meta name="keywords" content="前端,HTML,css,css3,javascript,jquery">
+<meta name="description" content="CSS制作水平垂直居中对齐，两端对齐，图片居中对齐等效果">
+<meta name="author" content="Lisa Chen">
 <link rel="shortcut icon" href="images/favicon.ico">
 <title>对齐方式</title>
 <link href="../css/public.css" rel="stylesheet">
-<link href="../css/common.css" rel="stylesheet">
 <link href="../css/page.css" rel="stylesheet">
 <link href="../css/align.css" rel="stylesheet">
+<link href="../highlight/styles/github.css" rel="stylesheet">
 </head>
 <body>
 <!--[if  IE 6]> 
@@ -32,20 +32,313 @@
 	})
 </script>
 <![endif]-->
-<div class="inner" style="width:52%; border:1px solid #eee; padding:20px;">
-	<h2>文字垂直居中(空inline-block元素加行高)</h2>
-	<div class="txt-middle">
-		<span>文字垂直居中文字垂直居中文字垂直居中文中文字垂直居中<br>文,字垂直居中文中文字垂直居中文字垂直居中文中文字垂直居中文字垂直居中文字垂直居中文字垂直<br>居中,文字垂直居中文字垂直居中文字垂直居中</span><i>&nbsp;</i>
-	</div>
-	<h2>图片垂直居中（添加行高）</h2>
-	<ul class="img-middle">
-		<li><img src="../images/default/img_90x120.jpg" alt=""></li>
-		<li><img src="../images/default/img_60x60.jpg" alt=""></li>
-		<li><img src="../images/default/img_120x120.jpg" alt=""></li>
-		<li><img src="../images/default/img_160x90.jpg" alt=""></li>
-		<li><img src="../images/default/img_120x90.jpg" alt=""></li>
+<nav class="topNav">
+	<ul class="navs inner fn-clearfix">
+		<li><a class="logo" href="../../index.html"><strong>&lt;favorite/&gt;</strong></a></li>
+		<li><a href="form.html">表单</a></li>
+		<li><a href="modal.html">弹出框</a></li>
+		<li><a href="align.html">对齐方式</a></li>
+		<li><a href="tab.html">标签切换</a></li>
+		<li><a href="css3-animation.html">CSS3动画</a></li>
+		<li><a href="imgTxt.html">图文类</a></li>
+		<li><a href="back-to-top.html">返回顶部</a></li>
+		<li><a href="img-replace-text.html">图片替代文字</a></li>
 	</ul>
-	<h2>水平分散(两端对齐)-IE7及以下不行</h2>
+</nav>
+<div class="wrapper-box inner">
+	<h1 class="article-Title">对齐方式</h1>
+	<div class="links">
+		<a href="#vertical">垂直居中</a>
+		<a href="#horizontal">水平居中</a>
+		<a href="#vertical-horizontal">垂直水平居中</a>
+		<a href="#jusyify">两端对齐</a>
+	</div>
+	<h2 id="vertical">垂直居中：</h2>
+	<div class="box">
+		<h3>方法一：使用padding</h3>
+		<h4>HTML:</h4>
+		<pre><code>&lt;div class=&quot;parent&quot;&gt;
+	&lt;div class=&quot;details&quot;&gt;内容内容&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		<h4>CSS:</h4>
+		<pre><code>.details {
+	padding-top:30px;
+	padding-bottom:30px;
+}</code></pre>
+		<p><strong>优点：</strong>兼容所有浏览器，支持所有元素，简单易懂</p>
+		<p><strong>缺点：</strong>如果父级容器固定，达不到居中效果</p>
+	</div>	
+	<div class="box">
+		<h3>方法二：单行文字垂直居中(使用行高)</h3>
+		<h4>HTML:</h4>
+		<pre><code>&lt;div class=&quot;vertical&quot;&gt;内容&lt;/div&gt;</code></pre>
+		<h4>CSS:</h4>
+		<pre><code>.vertical{
+	height:30px;
+	line-height:30px;
+}</code></pre>
+		<p><strong>优点：</strong>兼容所有浏览器；</p>
+		<p><strong>缺点：</strong>只适合单行文字和图片</p>
+	</div>
+	<div class="box box03">
+		<h3>方法三：线盒型</h3>
+		<div class="parent">
+			<div class="extra">&nbsp;</div>
+			<div class="details">内容</div>
+		</div>
+		<h4>HTML:</h4>
+		<pre><code>&lt;div class=&quot;parent&quot;&gt;
+	&lt;div class=&quot;extra&quot;&gt;&amp;nbsp;&lt;/div&gt;
+	&lt;div class=&quot;details&quot;&gt;内容区&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		<h4>CSS:</h4>
+		<pre><code>.parent{
+	height:90px;
+	border:1px dashed #ddd;
+	background-color:#fefefe;	
+}
+.extra{
+	float:left;
+	height:50%;
+	margin-bottom:-内容区高/2;	
+}
+.details{
+	position:relative;	
+	height:内容区高;
+	background-color:#ddd;
+	clear:both;	
+}</code></pre>
+		<p><strong>优点：</strong>兼容所有浏览器</p>
+		<p><strong>缺点：</strong>需要固定的宽高，内容无法自适应；需要加一个空标签</p>
+	</div>	
+	<div class="box">
+		<h3>方法四：多行文字垂直居中</h3>
+		<div class="txt-middle">
+			<span>多行文字垂直居中文字垂直居中文字垂直居中文中文字垂直居中<br>文,字垂直居中文中文字垂直居中文字垂直居中文中文字垂直居中文字垂直居中文字垂直居中文字垂直<br>居中,文字垂直居中文字垂直居中文字垂直居中</span><i>&nbsp;</i>
+		</div>
+		<h4>HTML:</h4>
+		<pre><code>&lt;div class=&quot;txt-middle&quot;&gt;
+	&lt;span&gt;多行文字垂直居中文字垂直居中文字垂直居中文中文字垂直居中&lt;br&gt;文,字垂直居中文中文字垂直居中文字垂直居中文中文字垂直居中文字垂直居中文字垂直居中文字垂直&lt;br&gt;居中,文字垂直居中文字垂直居中文字垂直居中&lt;/span&gt;&lt;i&gt;&amp;nbsp;&lt;/i&gt;
+&lt;/div&gt;	</code></pre>
+		<h4>CSS:</h4>
+		<pre><code>.txt-middle{
+	line-height:160px;
+	font-size:0;
+}
+.txt-middle span{
+	display:inline-block;
+	font-size:14px;
+	line-height:1.8em;
+	vertical-align:middle;
+}
+.txt-middle i{
+	display:inline-block;
+	vertical-align:middle;
+}</code></pre>
+		<p><strong>优点：</strong>不会有高度限制</p>
+		<p><strong>缺点：</strong>需要额外增加标签，标签必须是行内标签</p>
+	</div>
+	<div class="box box05">
+		<h3>方法五：线盒型</h3>
+		<div class="parent">
+			<div class="details">
+				<p>内容</p>
+				<p>内容</p>
+			</div>
+			<div class="extra"></div>
+		</div>
+		<h4>HTML:</h4>
+		<pre><code>&lt;div class=&quot;parent&quot;&gt;
+	&lt;div class=&quot;details&quot;&gt;
+		&lt;p&gt;内容&lt;/p&gt;
+		&lt;p&gt;内容&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;extra&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		<h4>CSS:</h4>
+		<pre><code>.parent {
+	height: 100px;
+	border:1px dashed #ddd;
+	background-color:#fefefe;
+}
+.details,
+.extra {
+	display: inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align: middle;
+}
+.extra {
+	height: 100%;
+}</code></pre>
+		<p><strong>优点：</strong>可以自适应高度</p>
+		<p><strong>缺点：</strong>需要额外增加标签，display:inline-blockIE6-7不支持要使用hack</p>
+	</div>
+	
+	<hr>
+	<h2 id="horizontal">水平居中：</h2>
+	<div class="box">
+		<h3>方法一：margin: auto+width</h3>
+		<h4>HTML:</h4>
+		<pre><code>&lt;div class=&quot;details&quot;&gt;content&lt;/div&gt;</code></pre>
+		<h4>CSS:</h4>
+		<pre><code>.details {
+	width: 200px;
+	margin: 0 auto;
+}</code></pre>
+		<p><strong>优点：</strong>支持所有浏览器运行</p>
+		<p><strong>缺点：</strong>需要固定宽度</p>
+	</div>
+	<div class="box">
+		<h3>方法二：text-align:center</h3>
+		<h4>HTML:</h4>
+		<pre><code>&lt;div class=&quot;details&quot;&gt;&lt;span&gt;content&lt;/span&gt;&lt;/div&gt;</code></pre>
+		<h4>CSS:</h4>
+		<pre><code>.details {
+		text-alidn:center;
+}</code></pre>
+		<p><strong>优点：</strong>支持所有浏览器运行,简单易懂</p>
+		<p><strong>缺点：</strong>只适应内联标签，文字需重新设置对齐方式</p>
+	</div>
+	<br>
+	<h2 id="vertical-horizontal">垂直水平居中</h2>
+	<div class="box">
+		<h3>方法一：使用绝对定位</h3>
+		<h4>HTML:</h4>
+		<pre><code>&lt;div class=&quot;vertical&quot;&gt;内容&lt;/div&gt;</code></pre>
+		<h4>CSS:</h4>
+		<pre><code>.vertical {
+	width: 元素高度;	
+	height: 元素高度;
+	position: absolute;
+	top: 50%;
+	left：50%;
+	margin-top: -元素高度/2;
+	margin-left: -元素宽度/2;
+}</code></pre>
+		<p><strong>优点：</strong>兼容所有浏览器；结构简单明了，不需增加额外的标签</p>
+		<p><strong>缺点：</strong>需要固定的宽高；绝对定位脱离了文档流</p>
+	</div>
+	<div class="box">
+		<h3>方法二：使用行高和文字居中</h3>
+		<ul class="img-middle">
+			<li><img src="../images/default/img_90x120.jpg" alt=""></li>
+			<li><img src="../images/default/img_60x60.jpg" alt=""></li>
+			<li><img src="../images/default/img_120x120.jpg" alt=""></li>
+			<li><img src="../images/default/img_160x90.jpg" alt=""></li>
+			<li><img src="../images/default/img_120x90.jpg" alt=""></li>
+		</ul>
+		<h4>HTML:</h4>
+		<pre><code>&lt;ul class=&quot;img-middle&quot;&gt;
+	&lt;li&gt;&lt;img src=&quot;../images/default/img_90x120.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;img src=&quot;../images/default/img_60x60.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;img src=&quot;../images/default/img_120x120.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;img src=&quot;../images/default/img_160x90.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;img src=&quot;../images/default/img_120x90.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;	</code></pre>
+		<h4>CSS:</h4>
+		<pre><code>.img-middle{
+	font-size:0;
+}
+.img-middle li{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:160px;
+	height:150px;
+	line-height:150px;
+	*font-size:125px;
+	border:1px dashed #D1E1F1;
+	text-align:center;
+	overflow:hidden;
+}
+.img-middle li img{
+	vertical-align:middle;
+}
+</code></pre>
+	</div>
+	<div class="box">
+		<h3>方法三：</h3>
+		<ul class="imgs fn-clearfix">
+			<li><a href="javascript:void(0)"><img src="../images/default/img_90x120.jpg" alt=""><span></span></a></li>
+			<li><a href="javascript:void(0)"><img src="../images/default/img_60x60.jpg" alt=""><span></span></a></li>
+			<li><a href="javascript:void(0)"><img src="../images/default/img_120x120.jpg" alt=""><span></span></a></li>
+			<li><a href="javascript:void(0)"><img src="../images/default/img_160x90.jpg" alt=""><span></span></a></li>
+			<li><a href="javascript:void(0)"><img src="../images/default/img_120x90.jpg" alt=""><span></span></a></li>
+		</ul>
+		<h4>HTML:</h4>
+		<pre><code>&lt;ul class=&quot;imgs fn-clearfix&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;../images/default/img_90x120.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;../images/default/img_60x60.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;../images/default/img_120x120.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;../images/default/img_160x90.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;../images/default/img_120x90.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+		<h4>CSS:</h4>
+		<pre><code>.imgs li{
+	float:left;
+	border:1px dashed #D1E1F1;
+	font-size:0;
+}
+.imgs li a{
+	display:table-cell;
+	*display:block;
+	width:160px;
+	height:130px;
+	text-align:center;
+	vertical-align:middle;
+	overflow:hidden;
+}
+.imgs img{
+	vertical-align:middle;
+}
+.imgs span {
+	*display: inline-block;
+	vertical-align: middle;
+	*height: 100%;
+}
+.imgs {
+	_height: 0;
+	*zoom: 1;
+}</code></pre>
+	</div>
+	<div class="box box-translate">
+		<h3>方法四：-webkit-transform: translate(-50%,-50%); </h3>
+		<div class="parent">
+			<div class="translate-center">
+				translate 实现垂直居中
+			</div>
+		</div>
+		<h4>HTML:</h4>
+		<pre><code>&lt;div class=&quot;parent&quot;&gt;
+	&lt;div class=&quot;translate-center&quot;&gt;
+		translate 实现垂直居中
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		<h4>CSS:</h4>
+		<pre><code>.box-translate .parent{
+	position:relative;
+	height: 100px;
+	border:1px dashed #ddd;
+	background-color:#fefefe;
+}
+.translate-center{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background-color:#eee;
+	-webkit-transform: translate(-50%, -50%) ;
+	-moz-transform: translate(-50%, -50%) ;
+	-ms-transform: translate(-50%, -50%) ;
+	-o-transform: translate(-50%, -50%) ;
+	transform: translate(-50%, -50%) ;
+}</code></pre>
+		<p><strong>优点：</strong>内容高度可变，代码量小</p>
+		<p><strong>缺点：</strong>不支持IE8，需要写厂商前缀，会和其他transform样式有冲突</p>
+	</div>
+	<br>
+	<h2 id="jusyify">水平分散(两端对齐)</h2>
+	<h3>块级元素：IE7及以下错乱</h3>
 	<ul class="jusyify jusyify01">
 		<li><img src="../images/default/img_90x120.jpg" alt=""></li>
 		<li><img src="../images/default/img_60x60.jpg" alt=""></li>
@@ -57,7 +350,34 @@
 		<li></li>
 		<li></li>
 	</ul>
-	<h2>水平分散(两端对齐2)</h2>
+	<h4>HTML:</h4>
+	<pre><code>&lt;ul class=&quot;jusyify jusyify01&quot;&gt;
+	&lt;li&gt;&lt;img src=&quot;../images/default/img_90x120.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;img src=&quot;../images/default/img_60x60.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;img src=&quot;../images/default/img_120x120.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;img src=&quot;../images/default/img_160x90.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;img src=&quot;../images/default/img_120x90.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;img src=&quot;../images/default/img_120x90.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+	<h4>CSS:</h4>
+	<pre><code>.jusyify{
+	text-align:justify;
+	font-size:0;
+}
+.jusyify01 li{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:160px;
+	margin-bottom:10px;
+	border:1px dashed #D1E1F1;
+	text-align:center;
+	vertical-align:top;
+}</code></pre>
+	<h3>行内元素</h3>
 	<div class="jusyify jusyify02">
 		<span><img src="../images/default/img_90x120.jpg" alt=""></span>
 		<span><img src="../images/default/img_90x120.jpg" alt=""></span>
@@ -65,12 +385,41 @@
 		<span><img src="../images/default/img_160x90.jpg" alt=""></span>
 		<span><img src="../images/default/img_120x120.jpg" alt=""></span>
 		<span><img src="../images/default/img_120x120.jpg" alt=""></span>
-		<span></span>
-		<span></span>
-		<span></span>
+		<span>&nbsp;</span>
+		<span>&nbsp;</span>
+		<span>&nbsp;</span>
 	</div>
+	<h4>HTML:</h4>
+	<pre><code>&lt;div class=&quot;jusyify jusyify02&quot;&gt;
+	&lt;span&gt;&lt;img src=&quot;../images/default/img_90x120.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;
+	&lt;span&gt;&lt;img src=&quot;../images/default/img_90x120.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;
+	&lt;span&gt;&lt;img src=&quot;../images/default/img_90x120.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;
+	&lt;span&gt;&lt;img src=&quot;../images/default/img_160x90.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;
+	&lt;span&gt;&lt;img src=&quot;../images/default/img_120x120.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;
+	&lt;span&gt;&lt;img src=&quot;../images/default/img_120x120.jpg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;
+	&lt;span&gt;&amp;nbsp;&lt;/span&gt;
+	&lt;span&gt;&amp;nbsp;&lt;/span&gt;
+	&lt;span&gt;&amp;nbsp;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+	<h4>CSS:</h4>
+	<pre><code>.jusyify{
+	text-align:justify;
+	font-size:0;
+}
+.jusyify02 span{
+	display:inline-block;
+	width:160px;
+	margin-bottom:10px;
+	border:1px dashed #D1E1F1;
+	text-align:center;
+	vertical-align:top;
+}</code></pre>
 </div>
 <script src="../js/jquery.js"></script>
 <script src="../js/myscript.js"></script>
+<script src="../highlight/highlight.pack.js"></script>
+<script>
+ hljs.initHighlightingOnLoad('html','css');
+</script>
 </body>
 </html>

@@ -5,15 +5,16 @@
 <!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<meta name="keywords" content="这是里是关键字">
-<meta name="description" content=" 网站内容描述">
-<meta name="author" content="网站作者">
+<meta name="keywords" content="前端,HTML,css,css3,javascript,jquery">
+<meta name="description" content="CSS制作水平垂直居中对齐，两端对齐，图片居中对齐等效果">
+<meta name="author" content="Lisa Chen">
 <link rel="shortcut icon" href="images/favicon.ico">
-<title>标题</title>
+<title>弹出层的实现方法</title>
 <link href="../css/public.css" rel="stylesheet">
 <link href="../css/common.css" rel="stylesheet">
+<link href="../css/btn.css" rel="stylesheet">
 <link href="../css/page.css" rel="stylesheet">
-<link href="../css/form.css" rel="stylesheet">
+<link href="../highlight/styles/github.css" rel="stylesheet">
 </head>
 <body>
 <!--[if  IE 6]> 
@@ -30,15 +31,302 @@
 	})
 </script>
 <![endif]-->
-<div class="inner" style="height:1600px;">
-	<h2>弹出层</h2>
-	<a class="btn btn-s" data-toggle="modal" data-target="#myModal">圆角弹出层</a>
-	<a class="btn btn-s" data-toggle="modal" data-target="#knowledgeSet">普通弹出框</a>
-	<h2>返回顶部</h2>
-	<a class="back-to-top" href="javascript:void(0)">返回顶部</a>
+<nav class="topNav">
+	<ul class="navs inner fn-clearfix">
+		<li><a class="logo" href="../../index.html"><strong>&lt;favorite/&gt;</strong></a></li>
+		<li><a href="form.html">表单</a></li>
+		<li><a href="modal.html">弹出框</a></li>
+		<li><a href="align.html">对齐方式</a></li>
+		<li><a href="tab.html">标签切换</a></li>
+		<li><a href="css3-animation.html">CSS3动画</a></li>
+		<li><a href="imgTxt.html">图文类</a></li>
+		<li><a href="back-to-top.html">返回顶部</a></li>
+		<li><a href="img-replace-text.html">图片替代文字</a></li>
+	</ul>
+</nav>
+<div class="wrapper-box inner">
+	<h1 class="article-Title">弹出层的实现方法</h1>
+	<div class="links">
+		<a href="#box01">普通弹出框</a>
+		<a href="#box02">圆角带阴影弹出框</a>
+	</div>
+	<div class="box" id="box01">
+		<h2>普通弹出框</h2>
+		<h3>静态实例</h3>
+		<div class="modal example-modal" id="" data-launch="false">
+			<div class="modal-content">
+				<div class="hd">
+					<h2 class="modal-title">设置</h2>
+					<button type="button" class="modal-close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="bd">
+					<p class="msg-text">家长您好！开学以来，孩子表现不错，课堂上认真听讲，请您及时表扬孩子。如果孩子能积极发言那就更好了，你可以引导孩子大声朗读经典文章，提高孩子语言表达能力，鼓励他大胆发言，锻炼孩子在众人面前发表自己言论的胆量，培养他的自信。相信孩子会有更大的进步的！</p>
+				</div>
+				<div class="ft">
+					<a class="btn btn-primary" href="javascript:void(0);">确定</a>
+					<a class="btn btn-default" data-dismiss="modal" href="javascript:void(0);">取消</a>
+				</div>
+			</div>
+		</div>
+		<h4>HTML:</h4>
+		<pre><code>&lt;div class=&quot;modal&quot; data-launch=&quot;false&quot;&gt;
+	&lt;div class=&quot;modal-content&quot;&gt;
+		&lt;div class=&quot;hd&quot;&gt;
+			&lt;h2 class=&quot;modal-title&quot;&gt;设置&lt;/h2&gt;
+			&lt;button type=&quot;button&quot; class=&quot;modal-close&quot; data-dismiss=&quot;modal&quot;&gt;&times;&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;bd&quot;&gt;
+			&lt;p class=&quot;msg-text&quot;&gt;家长您好！开学以来，孩子表现不错，课堂上认真听讲，请您及时表扬孩子。如果孩子能积极发言那就更好了，你可以引导孩子大声朗读经典文章，提高孩子语言表达能力，鼓励他大胆发言，锻炼孩子在众人面前发表自己言论的胆量，培养他的自信。相信孩子会有更大的进步的！&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;ft&quot;&gt;
+			&lt;a class=&quot;btn btn-primary&quot; href=&quot;javascript:void(0);&quot;&gt;确定&lt;/a&gt;
+			&lt;a class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot; href=&quot;javascript:void(0);&quot;&gt;取消&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		<h4>CSS:</h4>
+		<pre><code>.modal-content{
+	position:relative;
+	width:540px;
+	margin:0 auto;
+	background-color:#fff;
+	border:1px solid #ddd;
+	z-index: 9999;
+}
+.modal .modal-close{
+	position: absolute;
+	top: 0;
+	right:4px;
+	height:46px;
+	border:none;
+	background:none;
+	font-size: 20px;
+	color:#fff;
+	cursor: pointer;
+}
+.modal .modal-close:hover{
+	color:#ddd;
+}
+.modal .hd {
+	height: 46px;
+	padding: 0 10px;
+	background-color: #0895DA;
+	overflow: hidden;
+}
+.modal .modal-title {
+	font: 16px/46px 'Microsoft Yahei';
+	color: #fff;
+}
+.modal .bd { padding: 4px 10px; }
+.modal .ft {
+	margin: 10px 10px 0 10px;
+	text-align: center;
+	border-top: 1px solid #d4dce3;
+	padding: 10px;
+}
+.modal .ft a { margin: 0 2px; }
+</code></pre>
+		<h3>动态实例</h3>
+		<a class="btn btn-default" data-toggle="modal" data-target="#modal01">弹出"普通弹出框"</a>
+		<h4>HTML:</h4>
+		<pre><code>&lt;a class=&quot;btn&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal01&quot;&gt;弹出框&lt;/a&gt;
+&lt;div class=&quot;modal&quot; id=&quot;modal01&quot; data-launch=&quot;true&quot;&gt;
+...
+&lt;/div&gt;</code></pre>
+		<h4>CSS:</h4>
+		<pre><code>.modal-open{
+	position:relative;
+	overflow:hidden;
+	*zoom:1;
+}
+.modal {
+	display: none;
+	position: fixed;
+	_position:absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1050;
+	overflow:auto;
+}
+...
+.modal-backdrop{
+	position: fixed;
+	_position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	background: #666;
+	filter: alpha(opacity=20);
+	opacity: .2;
+}</code></pre>
+		<h4>Jquery:</h4>
+		<pre><code>$(function(){
+	$('[data-toggle=&quot;modal&quot;]').click(function(){
+		var $target=$($(this).data('target'));
+		$target.show();
+		$('body').addClass('modal-open').append('&lt;div class=&quot;modal-backdrop&quot;&gt;&lt;/div&gt;');
+		modalCenter();
+	})
+	$('[data-dismiss=&quot;modal&quot;]').click(function(){
+		$(this).parents('.modal').hide();
+		$('.modal-backdrop').remove();
+		$('body').removeClass('modal-open').css('padding-right','');
+	})
+	
+	$(window).resize(function(){
+		//弹出框上下居中
+		modalCenter();
+	});
+})		
+function modalCenter(){	
+	var	$targetC=$('.modal[data-launch=&quot;true&quot;]').find('.modal-content:visible'),
+		mH=$targetC.height(),
+		allH=$(document).height(),//document.body.scrollHeight,//网页正文全文高
+		wH=$(window).height();//document.body.clientHeight;//网页可见区域高
+		h=(wH-mH)/2;
+	if(allH&gt;wH){$('.modal-open').css('padding-right',17)}	
+	h&lt;0?h=0:h=h;
+	$targetC.css({'margin-top':h});
+}</code></pre>
+	</div>
+	<div class="box" id="box02">
+		<h2>圆角带阴影弹出框(切图片)</h2>
+		<h3>静态实例</h3>
+		<div class="modal modal-complex example-modal" id="" data-launch="false">
+			<div class="modal-content">
+				<div class="hd-l">
+					<div class="hd-r">
+						<div class="hd">
+							<h2 class="modal-title">设置</h2>
+							<button type="button" class="modal-close" data-dismiss="modal">&times;</button>
+						</div>
+					</div>		
+				</div>
+				<div class="bd-l">
+					<div class="bd-r">
+						<div class="bd">
+							<p class="msg-text">家长您好！开学以来，孩子表现不错，课堂上认真听讲，请您及时表扬孩子。如果孩子能积极发言那就更好了，你可以引导孩子大声朗读经典文章，提高孩子语言表达能力，鼓励他大胆发言，锻炼孩子在众人面前发表自己言论的胆量，培养他的自信。相信孩子会有更大的进步的！</p>
+						</div>
+					</div>			
+				</div>
+				<div class="ft-l">
+					<div class="ft-r">
+						<div class="ft">
+							<a class="btn btn-primary" href="javascript:void(0);">确定</a>
+							<a class="btn btn-default" data-dismiss="modal" href="javascript:void(0);">取消</a>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</div>
+		<h4>HTML:</h4>
+		<pre><code>&lt;div class=&quot;modal modal-complex&quot; data-launch=&quot;false&quot;&gt;
+	&lt;div class=&quot;modal-content&quot;&gt;
+		&lt;div class=&quot;hd-l&quot;&gt;
+			&lt;div class=&quot;hd-r&quot;&gt;
+				&lt;div class=&quot;hd&quot;&gt;
+					&lt;h2 class=&quot;modal-title&quot;&gt;设置&lt;/h2&gt;
+					&lt;button type=&quot;button&quot; class=&quot;modal-close&quot; data-dismiss=&quot;modal&quot;&gt;&times;&lt;/button&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;		
+		&lt;/div&gt;
+		&lt;div class=&quot;bd-l&quot;&gt;
+			&lt;div class=&quot;bd-r&quot;&gt;
+				&lt;div class=&quot;bd&quot;&gt;
+					&lt;p class=&quot;msg-text&quot;&gt;家长您好！开学以来，孩子表现不错，课堂上认真听讲，请您及时表扬孩子。如果孩子能积极发言那就更好了，你可以引导孩子大声朗读经典文章，提高孩子语言表达能力，鼓励他大胆发言，锻炼孩子在众人面前发表自己言论的胆量，培养他的自信。相信孩子会有更大的进步的！&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;			
+		&lt;/div&gt;
+		&lt;div class=&quot;ft-l&quot;&gt;
+			&lt;div class=&quot;ft-r&quot;&gt;
+				&lt;div class=&quot;ft&quot;&gt;
+					&lt;a class=&quot;btn btn-primary&quot; href=&quot;javascript:void(0);&quot;&gt;确定&lt;/a&gt;
+					&lt;a class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot; href=&quot;javascript:void(0);&quot;&gt;取消&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;		
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		<h4>CSS:</h4>
+		<pre><code>.modal-complex .modal-content{
+	border:none;
+	background:none;
+}
+.modal-complex .hd{
+	padding-top:10px;
+	background:url(../images/modal-complex.png) repeat-x 0 -124px;
+}
+.modal-complex .hd-l{
+	padding-left:30px;
+	background:url(../images/modal-complex.png) no-repeat 0 0;
+}
+.modal-complex .hd-r{
+	padding-right:30px;
+	background:url(../images/modal-complex.png) no-repeat right -62px;
+}
+.modal-complex .bd{
+	background:#fff;
+}
+.modal-complex .bd-l{
+	padding-left:10px;
+	background:url(../images/modal-complex-bdl.png) repeat-y;
+}
+.modal-complex .bd-r{
+	padding-right:10px;
+	background:url(../images/modal-complex-bdr.png) repeat-y right top;
+}
+.modal-complex .ft{
+	margin:0;
+	padding:10px 0;
+	height:40px;
+	background:url(../images/modal-complex.png) repeat-x 0 -342px;
+	overflow:hidden;
+}
+.modal-complex .ft-l{
+	padding-left:30px;
+	background:url(../images/modal-complex.png) no-repeat 0 -186px;
+}
+.modal-complex .ft-r{
+	padding-right:30px;
+	background:url(../images/modal-complex.png) no-repeat right -264px;
+}
+.modal-complex .modal-close{
+	top:12px;
+	right:20px;	
+}</code></pre>
+		<h3>动态实例</h3>
+		<a class="btn btn-default" data-toggle="modal" data-target="#modal02">"圆角弹出层"</a>
+	</div>
+	<hr>
+	<dl class="explain">
+		<dt><h3>注：</h3></dt>
+		<dd><span class="hljs-tag"><span class="hljs-attribute">data-launch</span>=<span class="hljs-value">"false"</span></span>：是否是弹出框，布尔型true|false </dd>
+		<dd><span class="hljs-tag"><span class="hljs-attribute">data-dismiss</span>=<span class="hljs-value">"modal"</span></span>：关闭弹出层</dd>
+	</dl>
 </div>
 <!----------------         弹出框 开始          ------------------->
-<div class="modal modal-complex" id="myModal">
+<div class="modal" id="modal01" data-launch="true">
+	<div class="modal-content">
+		<div class="hd">
+			<h2 class="modal-title">设置</h2>
+			<button type="button" class="modal-close" data-dismiss="modal">&times;</button>
+		</div>
+		<div class="bd">
+			<p class="msg-text">家长您好！开学以来，孩子表现不错，课堂上认真听讲，请您及时表扬孩子。如果孩子能积极发言那就更好了，你可以引导孩子大声朗读经典文章，提高孩子语言表达能力，鼓励他大胆发言，锻炼孩子在众人面前发表自己言论的胆量，培养他的自信。相信孩子会有更大的进步的！</p>
+		</div>
+		<div class="ft">
+			<a class="btn btn-primary" href="javascript:void(0);">确定</a>
+			<a class="btn btn-default" data-dismiss="modal" href="javascript:void(0);">取消</a>
+		</div>
+	</div>
+</div>
+<div class="modal modal-complex" id="modal02" data-launch="true">
 	<div class="modal-content">
 		<div class="hd-l">
 			<div class="hd-r">
@@ -63,32 +351,22 @@
 		<div class="ft-l">
 			<div class="ft-r">
 				<div class="ft">
-					<a class="btn btn-s" href="javascript:void(0);">确定</a>
-					<a class="btn btn-s" data-dismiss="modal" href="javascript:void(0);">取消</a>
+					<a class="btn btn-primary" href="javascript:void(0);">确定</a>
+					<a class="btn btn-default" data-dismiss="modal" href="javascript:void(0);">取消</a>
 				</div>
 			</div>		
 		</div>
 	</div>
 </div>
 
-<div class="modal" id="knowledgeSet">
-	<div class="modal-content">
-		<div class="hd">
-			<h2 class="modal-title">设置</h2>
-			<button type="button" class="modal-close" data-dismiss="modal">&times;</button>
-		</div>
-		<div class="bd">
-			内容
-		</div>
-		<div class="ft">
-			<a class="btn btn-s" href="javascript:void(0);">确定</a>
-			<a class="btn btn-s" data-dismiss="modal" href="javascript:void(0);">取消</a>
-		</div>
-	</div>
-</div>
+
 
 <!----------------         弹出框 结束          ------------------->
 <script src="../js/jquery.js"></script>
 <script src="../js/myscript.js"></script>
+<script src="../highlight/highlight.pack.js"></script>
+<script>
+ hljs.initHighlightingOnLoad('html','css');
+</script>
 </body>
 </html>
