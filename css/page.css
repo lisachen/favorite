@@ -1,118 +1,167 @@
-.logo{
-	margin-bottom:20px;
+* {
+	webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
-.logo a{
-	display:block;
-	padding:20px 0;	
-	background-color:#D43F41;	
-	text-align:center;
-	color: #fff;	
+a:hover { text-decoration: none; }
+img { width: 100%; }
+.logo a {
+	display: block;
+	padding: 20px 0;
+	background-color: #D43F41;
+	text-align: center;
+	color: #fff;
 }
-.logo strong{
-	display:block;
-	font:28px/30px Arial;
+.logo strong {
+	display: block;
+	font: 28px/30px Arial;
 	text-shadow: 1px 1px 1px rgba(0,0,0,.24);
 }
-.logo small{
-	display:block;
-	font-size:12px;
-	font-family:'SimSun';
-	font-weight:normal;
-	color:#F7D8D9;
+.logo small {
+	display: block;
+	font-size: 12px;
+	font-family: 'SimSun';
+	font-weight: normal;
+	color: #F7D8D9;
 }
-.sideNav{
-	position:fixed;
-	_position:absolute;
-	left:0;
-	top:0;
-	bottom:0;
-	width:160px;
-	background:#2A303E;
+.navbar li { border-bottom: 1px solid #2E3442; }
+.navbar .active a, .navbar .active a:hover {
+	background-color: #212530;
+	border-left: 6px solid #D43F41;
 }
-.sideNav li{
-	border-bottom:1px solid #2E3442;	
+.navbar li a {
+	display: block;
+	padding-left: 34px;
+	line-height: 46px;
+	color: #D9DADB;
 }
-.sideNav .active a,
-.sideNav .active a:hover{
-	background-color:#212530;
-	border-left:6px solid #D43F41;
+.navbar li a:hover { background-color: #282E3C; }
+.navbar-toggle {
+	position: absolute;
+	top: 14px;
+	right: 10px;
+	padding: 6px 10px 10px 10px;
+	background: none;
+	border: none;
+	border-radius: 4px;
 }
-.sideNav li a{
-	display:block;
-	padding-left:34px;
-	line-height:46px;
-	color:#D9DADB;	
+.navbar-toggle .icon-bar {
+	display: block;
+	width: 22px;
+	height: 2px;
+	margin-top: 4px;
+	border-radius: 1px;
+	background-color: #fff;
 }
-.sideNav li a:hover{
-	background-color:#282E3C;
+.navbar-toggle:hover { background: #D74D4E; }
+.headline {
+	margin: 20px 10px;
+	line-height: 40px;
+	border-bottom: 2px solid #D43F41;
+	color: #D43F41;
 }
-.main{
-	padding-left:220px;
-	padding-right:60px;
+.thumbnail { overflow: hidden; }
+.thumbnail .thum-item {
+	float: left;
+	width: 20%;
+	padding: 0 1%;
+	margin-bottom: 40px;
 }
-.title{
-	padding-top:40px;
-	margin-bottom:20px;
-	line-height:40px;
-	border-bottom:2px solid #D43F41;
-	color:#D43F41;	
-}
-.thumbnail{
-	overflow:hidden;
-}
-.thumbnail li{
-	float:left;
-	width:200px;
-	position:relative;
-	margin-right:12px;
-	margin-left:16px;
-	margin-bottom:40px;
-	background-color:#fff;
+.thum-item a {
+	display: block;	
+	background-color: #fff;
 	box-shadow: 0 1px 2px #C5C5C5;
 }
-.thumbnail li:hover{
-	border-bottom: 2px solid #dae0e5\0/;
-	box-shadow: 0 2px 8px #BBB;
-}
-.thumbnail li img{
-		transition: 1s;
+.thum-item a:hover { box-shadow: 0 2px 8px #BBB; }
+.thum-item img {
+	min-height:120px;	
+	transition: 1s;
 	-moz-transition: 1s;
 	-webkit-transition: 1s;
 	-o-transition: 1s;
 }
-.thumbnail li a,.thumbnail li img{
-	display:block;
+.thum-item .img {
+	width: 100%;	
+	background:url(../images/img-item-bg.png) no-repeat center;
+	overflow: hidden;
+	color:#fff;
 }
-.thumbnail li .img{
-	width:200px;
-	height:122px;
-	overflow:hidden;	
-}
-.books li .img{
-	height:260px;
-}
-.thumbnail a:hover img{
+.thum-item a:hover img {
 	transform: scale(1.2);
 	-webkit-transform: scale(1.2);
 }
-.thumbnail .txt{
-	padding:4px 10px;
+.thum-item .txt {
+	font-size: 14px;
+	padding: 4px 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
-.books li{
-	height:406px;
+.books .txt {
+	padding: 0;
+	white-space: normal;
 }
-.books .txt{
-	padding:0;
+.books .txt h3 {
+	padding: 4px 10px;
+	font-size: 14px;
+	color: #333;
+	background-color: #efefef;
 }
-.books .txt h3{
-	padding:4px 10px;
-	font-size:14px;
-	color:#333;
-	background-color:#efefef;
+.books .txt p { padding: 0 10px 4px 10px; }
+.thumbnail .txt p { font-size: 12px; }
+.footer {
+	color: #999;
+	line-height: 2;
+	text-align: center;
 }
-.books .txt p{
-	padding:0 10px 4px 10px;
+.footer img { display: none; }
+.header { background: #2A303E; }
+/*超小屏幕 手机 (<768px)	小屏幕 平板 (≥768px)	中等屏幕 桌面显示器 (≥992px)	大屏幕 大桌面显示器 (≥1200px)*/
+@media (min-width: 992px) {
+.navbar-toggle { display: none; }
+.header {
+	position: fixed;
+	_position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 160px;
 }
-.thumbnail .txt p{
-	font-size:12px;
+.nav { padding-top: 20px; }
+.main {
+	padding-left: 220px;
+	padding-right: 60px;
+}
+}
+/*@media (min-width: 768px) {
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 9;
+}
+.nav {
+	display: none;
+	padding-top: 10px;
+}
+.logo a { padding: 10px 0; }
+.main { padding: 40px 1% 0 1%; }
+}*/
+@media (max-width: 768px) {
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 9;
+}
+.nav {
+	display: none;
+	padding-top: 10px;
+}
+.logo a { padding: 10px 0; }
+.main {
+	width: 96%;
+	margin: 80px auto 0 auto;
+}
+.thumbnail .thum-item {
+	width: 50%;
+	margin-bottom: 20px;
+}
 }
